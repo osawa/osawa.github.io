@@ -19,7 +19,15 @@
 <li>
 <p>ワークファイルの親ディレクトリにoutputが展開されてしまうのが嫌だったので</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&quot;deploy&quot;: &quot;gatsby build &amp;&amp; cp -pvr public/* ../blog/ &amp;&amp; git add ../ &amp;&amp; git commit -m &#39;Deploy to production&#39; &amp;&amp; git push&quot;</code></pre></div>
-<p>こんなかんじで<code class="language-text">blog</code>ディレクトリにoutputを吐き出すことにした</p>
+<p>こんなかんじで<code class="language-text">blog</code>ディレクトリにoutputを吐き出すことにした……</p>
+</li>
+<li>
+<p>のだが、ルーティングがうまくいかなかったので<br>
+npm run deploy で GitHub Pages にお手軽デプロイ - Qiita <a href="https://qiita.com/star__hoshi/items/490959aee12dbf528f7c">https://qiita.com/star__hoshi/items/490959aee12dbf528f7c</a> <br>
+を参考にgh-pagesを導入</p>
+<ul>
+<li>あわせてgithubのほうで「Setting -> Pages -> Source」をgh-pagesに変更</li>
+</ul>
 </li>
 <li>
 <p>ドラフトの実装</p>
