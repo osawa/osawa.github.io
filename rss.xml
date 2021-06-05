@@ -1,28 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[osawa no log]]></title><description><![CDATA[desc]]></description><link>https://osawa/github.io/blog</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 04 Jun 2021 16:54:57 GMT</lastBuildDate><item><title><![CDATA[アデプトゥス・メカニカスに関するメモ]]></title><description><![CDATA[コデックスが複雑怪奇なので理解するためのメモ データテザー スキタリ・コアにつけてデータテザーキーワードをもたせる 指揮+1 データテザーキーワード効果（あるとよいこと） 【スキタリマーシャル】制御の布告
-ドクトリン非適合打ち消しの範囲が無制限になる（普通は…]]></description><link>https://osawa/github.io/blog/wh40k/adeptus-mechanicus/memo/</link><guid isPermaLink="false">https://osawa/github.io/blog/wh40k/adeptus-mechanicus/memo/</guid><pubDate>Fri, 04 Jun 2021 15:51:00 GMT</pubDate><content:encoded>&lt;p&gt;コデックスが複雑怪奇なので理解するためのメモ&lt;/p&gt;
-&lt;h2&gt;データテザー&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;スキタリ・コアにつけてデータテザーキーワードをもたせる&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;指揮+1&lt;/p&gt;
-&lt;h3&gt;データテザーキーワード効果（あるとよいこと）&lt;/h3&gt;
-&lt;/li&gt;
-&lt;li&gt;【スキタリマーシャル】制御の布告
-ドクトリン非適合打ち消しの範囲が無制限になる（普通は9”）&lt;/li&gt;
-&lt;li&gt;【クルセイド戦闘特性】戦場情報処理機構
-英雄的介入バフの範囲が無制限になる（普通は9”）&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;【スキタリ用ウォーロード特性】4.戦闘記録参照
-白兵戦先殴りバフの範囲が無制限になる（普通は9”）&lt;/p&gt;
-&lt;h3&gt;ユニットにおける付与および所持&lt;/h3&gt;
-&lt;/li&gt;
-&lt;li&gt;スコルピウス、オナガー、アイアンストライダー、シドニアンドラグーンはデータテザーキーワードをスキタリに付与できる&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;そのうちオナガー以外は自身もデフォで持ってる&lt;/p&gt;
-&lt;h3&gt;所感&lt;/h3&gt;
-&lt;p&gt;マーシャル起点である＝手下に帯同することが多そうなのと、ビークルから付与する方法が多彩なのでヴァンガード／レンジャーにわざわざ強化データテザーもたせる必要うすそう&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Gatsby + Github Pages によるブログ構築に際してのメモ]]></title><description><![CDATA[実際の手順と困ったところの記録 動機 普段Google Keepですべてのメモを取っていたが、しっかりしたことを書きづらいのと共有しづらい Medium, Noteを試してみたが文章整形が貧弱すぎてつらい Evernoteでもよかったが、できればWYSIWYG…]]></description><link>https://osawa/github.io/blog/gatsby-memo/</link><guid isPermaLink="false">https://osawa/github.io/blog/gatsby-memo/</guid><pubDate>Fri, 04 Jun 2021 15:51:00 GMT</pubDate><content:encoded>&lt;p&gt;実際の手順と困ったところの記録&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[osawa no log]]></title><description><![CDATA[desc]]></description><link>https://osawa/github.io/blog</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 05 Jun 2021 05:39:03 GMT</lastBuildDate><item><title><![CDATA[Gatsby + Github Pages によるブログ構築に際してのメモ]]></title><description><![CDATA[実際の手順と困ったところの記録 動機 普段Google Keepですべてのメモを取っていたが、しっかりしたことを書きづらいのと共有しづらい Medium, Noteを試してみたが文章整形が貧弱すぎてつらい Evernoteでもよかったが、できればWYSIWYG…]]></description><link>https://osawa/github.io/blog/gatsby-memo/</link><guid isPermaLink="false">https://osawa/github.io/blog/gatsby-memo/</guid><pubDate>Fri, 04 Jun 2021 15:51:00 GMT</pubDate><content:encoded>&lt;p&gt;実際の手順と困ったところの記録&lt;/p&gt;
 &lt;h2&gt;動機&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;普段Google Keepですべてのメモを取っていたが、しっかりしたことを書きづらいのと共有しづらい&lt;/li&gt;
@@ -57,6 +33,30 @@
 &lt;li&gt;カテゴリなりタグなり&lt;/li&gt;
 &lt;li&gt;検索ボックス&lt;/li&gt;
 &lt;li&gt;リデザイン&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[アデプトゥス・メカニカスに関するメモ]]></title><description><![CDATA[コデックスが複雑怪奇なので理解するためのメモ データテザー スキタリ・コアにつけてデータテザーキーワードをもたせる 指揮+1 データテザーキーワード効果（あるとよいこと） 【スキタリマーシャル】制御の布告
+ドクトリン非適合打ち消しの範囲が無制限になる（普通は…]]></description><link>https://osawa/github.io/blog/wh40k/adeptus-mechanicus/memo/</link><guid isPermaLink="false">https://osawa/github.io/blog/wh40k/adeptus-mechanicus/memo/</guid><pubDate>Fri, 04 Jun 2021 15:51:00 GMT</pubDate><content:encoded>&lt;p&gt;コデックスが複雑怪奇なので理解するためのメモ&lt;/p&gt;
+&lt;h2&gt;データテザー&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;スキタリ・コアにつけてデータテザーキーワードをもたせる&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;指揮+1&lt;/p&gt;
+&lt;h3&gt;データテザーキーワード効果（あるとよいこと）&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;【スキタリマーシャル】制御の布告
+ドクトリン非適合打ち消しの範囲が無制限になる（普通は9”）&lt;/li&gt;
+&lt;li&gt;【クルセイド戦闘特性】戦場情報処理機構
+英雄的介入バフの範囲が無制限になる（普通は9”）&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;【スキタリ用ウォーロード特性】4.戦闘記録参照
+白兵戦先殴りバフの範囲が無制限になる（普通は9”）&lt;/p&gt;
+&lt;h3&gt;ユニットにおける付与および所持&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;スコルピウス、オナガー、アイアンストライダー、シドニアンドラグーンはデータテザーキーワードをスキタリに付与できる&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;そのうちオナガー以外は自身もデフォで持ってる&lt;/p&gt;
+&lt;h3&gt;所感&lt;/h3&gt;
+&lt;p&gt;マーシャル起点である＝手下に帯同することが多そうなのと、ビークルから付与する方法が多彩なのでヴァンガード／レンジャーにわざわざ強化データテザーもたせる必要うすそう&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I’m sure I’ll write a lot more interesting things in the future. Oh, and here’s a…]]></description><link>https://osawa/github.io/blog/hello-world/</link><guid isPermaLink="false">https://osawa/github.io/blog/hello-world/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
 &lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
 &lt;p&gt;Oh, and here’s a great quote from this Wikipedia on
