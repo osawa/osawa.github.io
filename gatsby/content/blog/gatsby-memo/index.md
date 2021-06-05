@@ -1,6 +1,6 @@
 ---
 title: Gatsby + Github Pages によるブログ構築に際してのメモ
-date: "2021-06-05T00:51:00"
+date: "2021-06-05T15:00:00"
 description: 実際の手順と困ったところの記録
 
 ---
@@ -21,7 +21,11 @@ description: 実際の手順と困ったところの記録
 ```
 "deploy": "gatsby build && cp -pvr public/* ../blog/ && git add ../ && git commit -m 'Deploy to production' && git push"
 ```
-こんなかんじで`blog`ディレクトリにoutputを吐き出すことにした
+こんなかんじで`blog`ディレクトリにoutputを吐き出すことにした……
+- のだが、ルーティングがうまくいかなかったので\
+npm run deploy で GitHub Pages にお手軽デプロイ - Qiita https://qiita.com/star__hoshi/items/490959aee12dbf528f7c \
+を参考にgh-pagesを導入
+  - あわせてgithubのほうで「Setting -> Pages -> Source」をgh-pagesに変更
 - ドラフトの実装
   - Frontmatterに`draft`を追加
   - `gatsby-node.js`にあるスキーマに記述を追加
@@ -29,6 +33,11 @@ description: 実際の手順と困ったところの記録
 
 ## 今後適宜やりたいこと
 そもそも継続して書くのかという話はあるが
-- カテゴリなりタグなり
-- 検索ボックス
+
+- [ ] カテゴリなりタグなり
+- [ ] 検索ボックス
 - リデザイン
+  - [ ] tailwind導入
+  - [ ] デフォルトスタイルのいけてないところを直す
+  - [ ] 適当にクリーンなテーマを考えてあてる
+- [ ] Markdown周りの改善（外部リンク用のUIとかほしい）
