@@ -45,14 +45,14 @@ const BlogPostTemplate = ({ data, location }) => {
           }}
         >
           <li>
-            {previous && previous.frontmatter.draft && (
+            {previous && !previous.frontmatter.draft && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
-            {next && next.frontmatter.draft && (
+            {next && !next.frontmatter.draft && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
