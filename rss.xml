@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[osawa no log]]></title><description><![CDATA[desc]]></description><link>https://osawa/github.io/blog</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 10 Jun 2021 06:33:42 GMT</lastBuildDate><item><title><![CDATA[ナイトホーントに関するメモ]]></title><description><![CDATA[おもったことをとりあえず列挙 傷あたりのコストをしらべる Unit pt pt / model pt / wound save Chainrasp Horde 80 8 8 5+ Hexwraiths 130 26 13 4+ Spirit Hosts 120 40 13.3…]]></description><link>https://osawa/github.io/blog/aos/nighthaunt/</link><guid isPermaLink="false">https://osawa/github.io/blog/aos/nighthaunt/</guid><pubDate>Thu, 10 Jun 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;おもったことをとりあえず列挙&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[osawa no log]]></title><description><![CDATA[desc]]></description><link>https://osawa/github.io/blog</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 10 Jun 2021 06:40:59 GMT</lastBuildDate><item><title><![CDATA[ナイトホーントに関するメモ]]></title><description><![CDATA[おもったことをとりあえず列挙 傷あたりのコストをしらべる Unit pt pt / model pt / wound save Chainrasp Horde 80 8 8 5+ Hexwraiths 130 26 13 4+ Spirit Hosts 120 40 13.3…]]></description><link>https://osawa/github.io/blog/aos/nighthaunt/</link><guid isPermaLink="false">https://osawa/github.io/blog/aos/nighthaunt/</guid><pubDate>Thu, 10 Jun 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;おもったことをとりあえず列挙&lt;/p&gt;
 &lt;h2&gt;傷あたりのコストをしらべる&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -131,6 +131,7 @@
 &lt;/table&gt;
 &lt;ul&gt;
 &lt;li&gt;意味のある数値なのかは謎&lt;/li&gt;
+&lt;li&gt;ちなみに目標まわり（半径6mvの円）の面積は約72929mm2&lt;/li&gt;
 &lt;li&gt;意外にもヘックスレイスがラスプより面積コストよかったので、スクリーンに向いているとはいえるかもしれない&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[ソウルブライト・グレイヴロードに関するメモ]]></title><description><![CDATA[おもったことをとりあえず列挙 ユニット デッドウォーカー・ゾンビ / Deadwalker Zombies 最安バトルライン（5.75pt/model） セーヴ不可 コープスカートのバフでSv6+にすることは可能 殴って倒した数ぶんd6して…]]></description><link>https://osawa/github.io/blog/aos/soulblight-gravelords/memo/</link><guid isPermaLink="false">https://osawa/github.io/blog/aos/soulblight-gravelords/memo/</guid><pubDate>Mon, 07 Jun 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;おもったことをとりあえず列挙&lt;/p&gt;
 &lt;h2&gt;ユニット&lt;/h2&gt;
