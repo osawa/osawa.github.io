@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Tags from "../components/tags"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -31,9 +32,11 @@ const BlogIndex = ({ data, location }) => {
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
           let draft = post.frontmatter.draft || false
+          let tags = post.frontmatter.tags || [] // ダサいのでやめたい
           if (draft !== true) {
             return (
               <li key={post.fields.slug}>
+                {/* TODO: コンポーネント化、tag-pageにも使う */}
                 <article
                   className="post-list-item"
                   itemScope
@@ -47,6 +50,8 @@ const BlogIndex = ({ data, location }) => {
                     </h2>
                     <small>{post.frontmatter.date}</small>
                   </header>
+                  {/* あるときだけ出したい */}
+                  <Tags data={tags} key="tags" />
                   <section>
                     <p
                       dangerouslySetInnerHTML={{
@@ -85,6 +90,7 @@ export const pageQuery = graphql`
           title
           description
           draft
+          tags
         }
       }
     }

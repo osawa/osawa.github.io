@@ -6,6 +6,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const tagPage = path.resolve(`./src/templates/tag-page.js`)
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
@@ -19,6 +20,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             id
             fields {
               slug
+            }
+            frontmatter {
+              tags
             }
           }
         }
@@ -56,6 +60,33 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+  // tag page
+  const tagListTemp = []
+  posts.forEach(post => {
+    const tags = post.frontmatter.tags
+    tags.forEach(tag => {
+      // 小文字ハイフンに変換
+      // tag = tag.toLowerCase().replace(/ /g, '-');
+      tagListTemp.push(tag);
+    })
+  })
+  // 被ってるタグを削除して配列に再変換 //
+  const tagSet = new Set(tagListTemp)
+  const tagList = Array.from(tagSet)
+  // タグページ生成 //
+  if (tagList.length !== 0) {
+    tagList.forEach(tag => {
+      createPage({
+        path: `/tags/${tag}/`,
+        component: tagPage,
+        context: {
+          slug: tag,
+        },
+      })
+    })
+  }
+
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -107,6 +138,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       date: Date @dateformat
       draft: Boolean
+      tags: [String]
     }
 
     type Fields {
