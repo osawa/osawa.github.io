@@ -2,6 +2,7 @@
 title: アデプトゥス・メカニカスに関するメモ
 date: "2021-06-05T00:51:00"
 description: コデックスが複雑怪奇なので理解するためのメモ
+tags: ['warhammer', '40k', 'adeptus-mechanicus']
 
 ---
 コデックスが複雑怪奇なので理解するためのメモ
@@ -34,3 +35,19 @@ description: コデックスが複雑怪奇なので理解するためのメモ
 ### 所感
 策略にしか関係しないのがつらいがhit-1はうれしい\
 オナガーはデータテザーと択一なので悩ましい、策略は他の使いみちがいっぱいあるのでデータテザーでいいかも
+
+---
+## フォスフォール・ブラストピストル
+- ブラストウェポンであるはずだが、1d4chanには
+  > Phosphor Blast Pistol: Now gains D3 shots to fit its name, lacks actual Blast rule so still useable in engagement range.
+- つまり名前とは裏腹にブラストウェポンではないとある
+  - 英語版コデックスを参照して判断すべし
+
+---
+## 神聖同盟団（こんな名前だったっけ）
+- artisanの初期と発展アビリティが日本語だと逆になっている
+
+---
+## シカリアン・ラストストーカーの「OPTIMISED GAIT」について
+- 歩行困難地形の効果は適用される \
+Ruleshammer: Adeptus Mechanicus – Goonhammer https://www.goonhammer.com/ruleshammer-adeptus-mechanicus/
