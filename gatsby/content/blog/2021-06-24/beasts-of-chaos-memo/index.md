@@ -1,8 +1,8 @@
 ---
-title: ビースト・オブ・ケイオスに関するメモ
+title: 【AoS】ビースト・オブ・ケイオスに関するメモ
 date: "2021-06-24"
 description: おもったことをとりあえず列挙
-tags: ['warhammer', 'aos', 'soulblight-gravelords']
+tags: ['warhammer', 'aos', 'beasts-of-chaos']
 
 ---
 おもったことをとりあえず列挙
