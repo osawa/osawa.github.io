@@ -45,7 +45,8 @@ diff001a/diff001a-gatsby-blog: my gatsby blog https://github.com/diff001a/diff00
 - [x] カテゴリなりタグなり
 - [ ] 検索ボックス（これはきつそう）
 - リデザイン
-  - [ ] tailwind導入
+  - [x] emotion導入
+  - [ ] tailwind（twin.macro)導入
   - [ ] デフォルトスタイルのいけてないところを直す
   - [ ] 適当にクリーンなテーマを考えてあてる
 - [ ] Markdown周りの改善（外部リンク用のUIとかほしい）
