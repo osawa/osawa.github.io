@@ -18,10 +18,10 @@ const SpellOdds = ({ data, location }) => {
   };
 
   const getCastOdds = (value = castValue) => {
-    if (value <= 2) return 0;
+    let v = value == 2 ? 3 : value; // 出目2はファンブルなので詠唱値3と同値扱い
     let odds = 0;
     return (() => {
-      for (let i = value; i < 13; i++) {
+      for (let i = v; i < 13; i++) {
         odds += getOdds(i);
       }
       return odds;
@@ -29,7 +29,9 @@ const SpellOdds = ({ data, location }) => {
   };
 
   const getUnbindOdds  = (value = castValue) => {
-    return value >= 12 ? 0 : getCastOdds(parseInt(value) + 1);
+    if (value >= 12) return 0;
+    const v = value == 2 ? 3 : value;
+    return getCastOdds(parseInt(v) + 1);
   };
 
   const getNotUnbindOdds = value => {
@@ -37,10 +39,10 @@ const SpellOdds = ({ data, location }) => {
   }
 
   const getFinallySuccessOdds = value => {
-    if (value <= 2) return 0;
+    let v = value == 2 ? 3 : value; // 出目2はファンブルなので詠唱値3と同値扱い
     let odds = 0;
     return (() => {
-      for (let i = value; i < 13; i++) {
+      for (let i = v; i < 13; i++) {
         const so = getOdds(i) * getNotUnbindOdds(i);
         odds += so;
         console.log('getOdds: ' + getOdds(i));
