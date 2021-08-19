@@ -93,7 +93,6 @@ const SpellOdds = ({ data, location }) => {
           <table css={tableStyles}>
             <tr>
               <th css={thStyles}>呪文発動<small>（詠唱成功かつ打ち消し失敗）</small>率</th>
-              {/* TODO: 補正いれる */}
               <td css={tdStyles}>{toPercent(getFinallySuccessOdds(castValue, castModifier))}</td>
             </tr>
           </table>
