@@ -7,7 +7,7 @@ tags:
   - react
 
 ---
-2021-06-10 更新 \
+2021-08-18 更新 \
 Gatsby + Github Pages でブログをつくるぞ
 
 ## 動機
@@ -39,15 +39,38 @@ diff001a/diff001a-gatsby-blog: my gatsby blog https://github.com/diff001a/diff00
 を参考に`gatsby-node.js`をいじったり`templates/tag-page.js`をつくったり
   - 雰囲気だけで実装したのであらためて仕組みをじっくり把握する必要がある
 
+### Emotionおよびtwin.macroの導入
+- Emotion | Gatsby https://www.gatsbyjs.com/docs/how-to/styling/emotion/
+- GatsbyにTailwind CSSを導入する最短手順(CSS-in-JS) - Qiita https://qiita.com/suin/items/7281351779b5206e17b3
+
+を参考にいれた（styled-componentとbabelMacros設定は取り急ぎ自分では使わないので抜いた）
+```jsx
+import tw, { css } from 'twin.macro';
+
+const hoge = () => (
+  <>
+    <div css={tw`m-0`}>...</div>
+    <div css={hogeStyles}>...</div>
+  </>
+);
+
+const hogeStyles = css`
+  margin: 0;
+`;
+```
+のようにして使ってる
+
 ## 今後適宜やりたいこと
 そもそも継続して書くのかという話はあるが
 
 - [x] カテゴリなりタグなり
+- [ ] パーマリンクの仕様策定（`YYYY-MM-DD_slug`の形がいい気がする）
 - [ ] 検索ボックス（これはきつそう）
+- [ ] TypeScript導入
 - リデザイン
   - [x] emotion導入
-  - [ ] tailwind（twin.macro)導入
-  - [ ] デフォルトスタイルのいけてないところを直す
+  - [x] tailwind（twin.macro)導入
+  - [x] デフォルトスタイルのいけてないところを直す（簡易的に対応）
   - [ ] 適当にクリーンなテーマを考えてあてる
 - [ ] Markdown周りの改善（外部リンク用のUIとかほしい）
   - このへんでできそう https://nodachisoft.com/common/jp/article/jp000025/
