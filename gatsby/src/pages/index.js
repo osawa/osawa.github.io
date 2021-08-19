@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import tw, { css } from 'twin.macro'
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -28,14 +29,14 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
       <Bio />
-      <ol style={{ listStyle: `none` }}>
+      <ol tw="m-0 list-none">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
           let draft = post.frontmatter.draft || false
           let tags = post.frontmatter.tags || [] // ダサいのでやめたい
           if (draft !== true) {
             return (
-              <li key={post.fields.slug}>
+              <li key={post.fields.slug} css={articleStyles}>
                 {/* TODO: コンポーネント化、tag-pageにも使う */}
                 <article
                   className="post-list-item"
@@ -81,7 +82,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
-        excerpt
+        excerpt(truncate: true)
         fields {
           slug
         }
@@ -95,4 +96,8 @@ export const pageQuery = graphql`
       }
     }
   }
+`
+
+const articleStyles = css`
+  ${tw`m-0 py-8 border-b`}
 `
