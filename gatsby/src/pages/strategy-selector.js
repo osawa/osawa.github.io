@@ -5,7 +5,7 @@ import tw, { css } from 'twin.macro'
 import { Strategy } from "../components/strategy-selector/Strategy"
 
 const StrategySelector = ({ data, location }) => {
-  const version = '0.1.1';
+  const version = '0.1.2';
 
   return (
     <div css={tw`flex flex-col`}>

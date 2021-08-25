@@ -11,6 +11,10 @@ export const Strategy = ({ title, text, hasAdditionalPoint = false }) => {
   const setSelected = (e) => {
     e.stopPropagation();
     setIsSelected(true);
+    // init的なものを作っておくべきか
+    setIsSuccess(false);
+    setIsEnd(false);
+    setAdditionalPoint(false);
   }
   const setSuccess = (e) => {
     finish(e);
@@ -28,6 +32,10 @@ export const Strategy = ({ title, text, hasAdditionalPoint = false }) => {
   const cancel = (e) => {
     e.stopPropagation();
     setIsSelected(false);
+  }
+  const edit = (e) => {
+    setSelected(e);
+    setIsOpen(true);
   }
 
   const [additionalPoint, setAdditionalPoint] = useState(false);
@@ -51,17 +59,18 @@ export const Strategy = ({ title, text, hasAdditionalPoint = false }) => {
         <div css={[textStyles, isOpen || tw`hidden`]}>{text}</div>
         {isEnd ||
           <div css={tw`mt-2`}>
-            {isSelected || <button css={buttonStyles} onClick={setSelected}>選択</button>}
-            {isSelected &&
-              <div css={tw`flex space-x-4`}>
-                <button css={buttonStyles} onClick={setSuccess}>達成</button>
-                {hasAdditionalPoint && <button css={buttonStyles} onClick={setSuccessWithAdditionalPoint}>+1VP</button>}
-                <button css={[buttonStyles, buttonFailureStyles]} onClick={setFailure}>失敗</button>
-                <button css={[buttonStyles, buttonCancelStyles]} onClick={cancel}>キャンセル</button>
-              </div>
-            }
+              {isSelected || <button css={buttonStyles} onClick={setSelected}>選択</button>}
+              {isSelected &&
+                <div css={tw`flex space-x-4`}>
+                  <button css={buttonStyles} onClick={setSuccess}>達成</button>
+                  {hasAdditionalPoint && <button css={buttonStyles} onClick={setSuccessWithAdditionalPoint}>+1VP</button>}
+                  <button css={[buttonStyles, buttonFailureStyles]} onClick={setFailure}>失敗</button>
+                  <button css={[buttonStyles, buttonCancelStyles]} onClick={cancel}>キャンセル</button>
+                </div>
+              }
           </div>
         }
+        {(isEnd && isOpen) && <button css={[buttonStyles, buttonCancelStyles, tw`mt-2`]} onClick={edit}>修正</button>}
       </div>
     </div>
   )
@@ -76,11 +85,11 @@ const activeStrategyStyles = css`
 `;
 
 const disabledStrategyStyles = css`
-  ${tw`bg-gray-200 opacity-50`}
+  ${tw`bg-gray-50 text-gray-400`}
 `;
 
 const succeedStrategyStyles = css`
-  ${tw`bg-green-100`}
+  ${tw`bg-green-50`}
 `;
 
 const titleStyles = css`
@@ -93,12 +102,12 @@ const titleStyles = css`
 
 const titleCloseStyles = css`
   &::after {
-    ${tw`border-b border-t-0 rotate-45`}
+    ${tw`top-1 border-b border-t-0 rotate-45`}
   }
 `;
 
 const additionalPointStyles = css`
-  ${tw`relative inline-block ml-2 px-2 font-normal text-xs border border-black rounded`}
+  ${tw`relative inline-block ml-2 px-2 font-normal text-xs border border-gray-400 rounded`}
   top: -2px;
 `;
 
