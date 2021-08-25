@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { Link, graphql } from "gatsby"
 import tw, { css } from 'twin.macro'
 
 import { Strategy } from "../components/strategy-selector/Strategy"
 
-const StrategySelector = ({ data, location }) => {
+const StrategySelector = () => {
   const version = '0.1.3';
 
   return (
@@ -14,6 +13,7 @@ const StrategySelector = ({ data, location }) => {
         <small>Ver {version}</small>
       </div>
       <div>
+        {/* TODO: 配列を流して量産する関数を用意する */}
         <Strategy
           title="戦線崩壊"
           text="この戦術目標を開示するとき、戦場に配置されている敵軍開戦時アーミーのバトルラインユニットを1個選択せよ。開示したターン中に選択したユニットを撃破した場合、この戦術目標を達成する。選択されたユニットが味方モンスターの攻撃、あるいは味方モンスターのアビリティによって撃破された場合、追加の勝利点を1ポイント獲得する。"
@@ -57,28 +57,3 @@ const StrategySelector = ({ data, location }) => {
 }
 
 export default StrategySelector
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      nodes {
-        excerpt(truncate: true)
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "YYYY-MM-DD")
-          title
-          description
-          draft
-          tags
-        }
-      }
-    }
-  }
-`
