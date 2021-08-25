@@ -11,6 +11,7 @@ export const Strategy = ({ title, text, hasAdditionalPoint = false }) => {
   const setSelected = (e) => {
     e.stopPropagation();
     setIsSelected(true);
+    setIsOpen(true);
     // init的なものを作っておくべきか
     setIsSuccess(false);
     setIsEnd(false);
@@ -32,10 +33,6 @@ export const Strategy = ({ title, text, hasAdditionalPoint = false }) => {
   const cancel = (e) => {
     e.stopPropagation();
     setIsSelected(false);
-  }
-  const edit = (e) => {
-    setSelected(e);
-    setIsOpen(true);
   }
 
   const [additionalPoint, setAdditionalPoint] = useState(false);
@@ -70,7 +67,7 @@ export const Strategy = ({ title, text, hasAdditionalPoint = false }) => {
               }
           </div>
         }
-        {(isEnd && isOpen) && <button css={[buttonStyles, buttonCancelStyles, tw`mt-2`]} onClick={edit}>修正</button>}
+        {(isEnd && isOpen) && <button css={[buttonStyles, buttonCancelStyles, tw`mt-2`]} onClick={setSelected}>修正</button>}
       </div>
     </div>
   )
