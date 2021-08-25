@@ -13,16 +13,18 @@ export const Strategy = ({ title, text, hasAdditionalPoint = false }) => {
     setIsSelected(true);
   }
   const setSuccess = (e) => {
-    e.stopPropagation();
+    finish(e);
     setIsSuccess(true);
-    setIsEnd(true);
-    setIsSelected(false);
   };
   const setFailure = (e) => {
+    finish(e);
+  };
+  const finish = (e) => {
     e.stopPropagation();
     setIsEnd(true);
     setIsSelected(false);
-  };
+    setIsOpen(false);
+  }
   const cancel = (e) => {
     e.stopPropagation();
     setIsSelected(false);
