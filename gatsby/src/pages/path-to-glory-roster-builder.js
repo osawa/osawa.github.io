@@ -15,16 +15,16 @@ const Section = ({children, label, gray, ...props}) => {
 const TextField = ({label, dark}) => {
   return (
     <div tw="flex border-b">
-      <div tw="p-1 border-r w-1/3 text-sm" css={dark ? tw`bg-green-500` : tw`bg-green-300`}>{label}</div>
-      <div tw="w-2/3"><input type="text" tw="px-1 w-full h-full text-sm" /></div>
+      <div tw="p-1 border-r w-1/3 text-sm leading-4" css={dark ? tw`bg-green-500` : tw`bg-green-300`}>{label}</div>
+      <div tw="w-2/3"><input type="text" tw="block px-1 w-full h-full text-sm" /></div>
     </div>
   );
 };
 
-const TextareaField = ({label}) => {
+const TextareaField = ({label, dark}) => {
   return (
     <div tw="flex border-b">
-      <div tw="p-1 border-r bg-green-300 w-1/3 text-sm">{label}</div>
+      <div tw="p-1 border-r w-1/3 text-sm leading-4" css={dark ? tw`bg-green-500` : tw`bg-green-300`}>{label}</div>
       <div tw="w-2/3">
         <textarea tw="block p-1 w-full h-16 text-sm leading-4"></textarea>
       </div>
@@ -109,7 +109,7 @@ const Hero = ({dark}) => {
       <TextField label="Name" dark={dark} />
       <TextField label="Warscroll" dark={dark} />
       <TextField label="Command Trait" dark={dark} />
-      <TextField label="Core Enhancements / Notes" dark={dark} />
+      <TextareaField label="Core Enhancements / Notes" dark={dark} />
       <TextField label="Injury" dark={dark} />
       <div tw="flex">
         <div tw="flex border-b w-1/2">
@@ -134,7 +134,7 @@ const OtherUnit = ({dark}) => {
     <>
       <TextField label="Name" dark={dark} />
       <TextField label="Warscroll" dark={dark} />
-      <TextField label="Veteran Abilities / Notes" dark={dark} />
+      <TextareaField label="Veteran Abilities / Notes" dark={dark} />
       <div tw="flex">
         <div tw="flex border-b w-1/2">
           <div tw="p-1 border-r w-2/3 text-sm" css={dark ? tw`bg-green-500` : tw`bg-green-300`}>Reinforced</div>
@@ -169,7 +169,7 @@ const OtherUnit = ({dark}) => {
 }
 
 const PathToGloryRosterBuilder = () => {
-  const version = '0.0.1';
+  const version = '0.0.2';
 
   const [isPtgRoster, setIsPtgRoster] = useState(true);
 
@@ -180,7 +180,6 @@ const PathToGloryRosterBuilder = () => {
         <small>Ver {version}</small>
       </div>
 
-      {/* TODO: 戦闘序列とタブ切り替え */}
       <div tw="flex justify-between space-x-2 mt-2 px-4 border-b w-full">
         <div css={[tabStyles, isPtgRoster && activeTabStyles]} onClick={() => setIsPtgRoster(true)}>Path to Glory Roster</div>
         <div css={[tabStyles, isPtgRoster || activeTabStyles]} onClick={() => setIsPtgRoster(false)}>Order of Battle</div>
@@ -285,7 +284,7 @@ const PathToGloryRosterBuilder = () => {
             <TextField label="Name" />
             <TextField label="Warscroll" />
             <TextField label="Command Trait" />
-            <TextField label="Core Enhancements / Notes" />
+            <TextareaField label="Core Enhancements / Notes" />
             <TextField label="Injury" />
             <TextField label="Renown Points" />
             <NumberField label="Points" min="0" step="5" />
@@ -312,7 +311,7 @@ const PathToGloryRosterBuilder = () => {
             <OtherUnit dark />
           </Section>
 
-          <Section label="ORDER OF BATTLE LIMITS">
+          <Section label="ORDER OF BATTLE LIMITS" gray>
             <NumberField label="Total Units" min="6" value="6" />
             <NumberField label="Heroes" min="3" value="3" />
             <NumberField label="Monsters" min="1" value="1" />
@@ -331,10 +330,11 @@ const PathToGloryRosterBuilder = () => {
 export default PathToGloryRosterBuilder
 
 const tabStyles = css`
-  ${tw`relative flex-1 py-1 border rounded rounded-b-none text-sm text-center`}
+  ${tw`relative flex-1 py-1 border rounded rounded-b-none text-sm text-center bg-gray-100`}
   bottom: -1px;
 `;
 
 const activeTabStyles = css`
+  ${tw`bg-white`}
   border-bottom-color: white;
 `;
