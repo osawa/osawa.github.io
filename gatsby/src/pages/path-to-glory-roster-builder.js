@@ -1,175 +1,20 @@
 import React, { useState } from 'react';
 import tw, { css } from 'twin.macro'
 
-import { Strategy } from "../components/strategy-selector/Strategy"
-
-const Section = ({children, label, gray, ...props}) => {
-  return (
-    <section tw="px-2 py-4" css={gray && tw`bg-gray-100`} {...props}>
-      {label && <div tw="font-medium text-sm text-center">{label}</div>}
-      <div tw="mt-2 border border-b-0">{children}</div>
-    </section>
-  );
-}
-
-const TextField = ({label, dark}) => {
-  return (
-    <div tw="flex border-b">
-      <div tw="p-1 border-r w-1/3 text-sm leading-4" css={dark ? tw`bg-green-500` : tw`bg-green-300`}>{label}</div>
-      <div tw="w-2/3"><input type="text" tw="block px-1 w-full h-full text-sm" /></div>
-    </div>
-  );
-};
-
-const TextareaField = ({label, dark}) => {
-  return (
-    <div tw="flex border-b">
-      <div tw="p-1 border-r w-1/3 text-sm leading-4" css={dark ? tw`bg-green-500` : tw`bg-green-300`}>{label}</div>
-      <div tw="w-2/3">
-        <textarea tw="block p-1 w-full h-16 text-sm leading-4"></textarea>
-      </div>
-    </div>
-  );
-};
-
-const NumberField = ({label, dark, ...props}) => {
-  return (
-    <div tw="flex border-b">
-      <div tw="p-1 border-r w-1/3 text-sm" css={dark ? tw`bg-green-500` : tw`bg-green-300`}>{label}</div>
-      <div tw="w-2/3">
-        <input type="number" tw="px-1 w-full h-full text-sm" {...props} />
-      </div>
-    </div>
-  );
-};
-
-const CheckboxField = ({label}) => {
-  return (
-    <div tw="flex border-b">
-      <div tw="p-1 border-r bg-green-300 w-2/3 text-sm">{label}</div>
-      <div tw="p-1 w-1/3 flex items-center justify-center bg-white">
-        <input type="checkbox" tw="block" />
-      </div>
-    </div>
-  );
-};
-
-const SelectField = ({label, options}) => {
-  const optionJSX = options.map((option) => {
-    return (
-      <option value={option}>{option}</option>
-    );
-  });
-  const Options = () => {
-    return optionJSX;
-  };
-  return (
-    <div tw="flex border-b">
-      <div tw="p-1 border-r bg-green-300 w-1/3 text-sm">{label}</div>
-      <div tw="w-2/3">
-        <select name="" id="" tw="w-full h-full text-sm">
-          <Options />
-        </select>
-      </div>
-    </div>
-  );
-};
-
-const Territory = () => {
-  return (
-    <div tw="flex w-full border-b">
-      <div tw="border-r w-1/3 text-sm"><input type="text" tw="p-1 w-full h-full text-sm" /></div>
-      <div tw="border-r w-1/3 text-sm"><input type="text" tw="p-1 w-full h-full text-sm" /></div>
-      <div tw="p-1 w-1/3 flex items-center justify-center bg-white">
-        <input type="checkbox" tw="block" />
-      </div>
-    </div>
-  );
-};
-
-const Territories = ({label}) => {
-  return (
-    <>
-      <div tw="p-1 border-b bg-green-500 text-sm">{label}</div>
-      <div tw="flex w-full">
-        <div tw="p-1 border-r bg-green-300 w-1/3 text-sm">Name</div>
-        <div tw="p-1 border-r bg-green-300 w-1/3 text-sm">Territory Type</div>
-        <div tw="p-1 bg-green-300 w-1/3 text-sm">Upgraded</div>
-      </div>
-      <Territory />
-      <Territory />
-      <Territory />
-    </>
-  );
-}
-
-const Hero = ({dark}) => {
-  return (
-    <>
-      <TextField label="Name" dark={dark} />
-      <TextField label="Warscroll" dark={dark} />
-      <TextField label="Command Trait" dark={dark} />
-      <TextareaField label="Core Enhancements / Notes" dark={dark} />
-      <TextField label="Injury" dark={dark} />
-      <div tw="flex">
-        <div tw="flex border-b w-1/2">
-          <div tw="p-1 border-r w-2/3 text-sm" css={dark ? tw`bg-green-500` : tw`bg-green-300`}>Renown Points</div>
-          <div tw="w-1/3 flex items-center justify-center bg-white">
-            <input type="number" min="0" step="5" tw="px-1 w-full h-full text-sm" />
-          </div>
-        </div>
-        <div tw="flex border-b w-1/2">
-          <div tw="p-1 border-r w-2/3 text-sm" css={dark ? tw`bg-green-500` : tw`bg-green-300`}>Points</div>
-          <div tw="w-1/3 flex items-center justify-center bg-white">
-            <input type="number" min="0" step="5" tw="px-1 w-full h-full text-sm" />
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
-
-const OtherUnit = ({dark}) => {
-  return (
-    <>
-      <TextField label="Name" dark={dark} />
-      <TextField label="Warscroll" dark={dark} />
-      <TextareaField label="Veteran Abilities / Notes" dark={dark} />
-      <div tw="flex">
-        <div tw="flex border-b w-1/2">
-          <div tw="p-1 border-r w-2/3 text-sm" css={dark ? tw`bg-green-500` : tw`bg-green-300`}>Reinforced</div>
-          <div tw="p-1 w-1/3 flex items-center justify-center space-x-2 bg-white">
-            <input type="checkbox" tw="block" />
-            <input type="checkbox" tw="block" />
-          </div>
-        </div>
-        <div tw="flex border-b w-1/2">
-          <div tw="p-1 border-r w-2/3 text-sm" css={dark ? tw`bg-green-500` : tw`bg-green-300`}>Casualty Score</div>
-          <div tw="w-1/3 flex items-center justify-center bg-white">
-            <input type="number" min="0" step="5" tw="px-1 w-full h-full text-sm" />
-          </div>
-        </div>
-      </div>
-      <div tw="flex">
-        <div tw="flex border-b w-1/2">
-          <div tw="p-1 border-r w-2/3 text-sm" css={dark ? tw`bg-green-500` : tw`bg-green-300`}>Renown Points</div>
-          <div tw="w-1/3 flex items-center justify-center bg-white">
-            <input type="number" min="0" step="5" tw="px-1 w-full h-full text-sm" />
-          </div>
-        </div>
-        <div tw="flex border-b w-1/2">
-          <div tw="p-1 border-r w-2/3 text-sm" css={dark ? tw`bg-green-500` : tw`bg-green-300`}>Points</div>
-          <div tw="w-1/3 flex items-center justify-center bg-white">
-            <input type="number" min="0" step="5" tw="px-1 w-full h-full text-sm" />
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
+import { CheckboxField } from '../components/path-to-glory-roster-builder/CheckboxField';
+import { FieldsetTitle } from '../components/path-to-glory-roster-builder/FieldsetTitle';
+import { HeroUnit } from '../components/path-to-glory-roster-builder/HeroUnit';
+import { NumberField } from "../components/path-to-glory-roster-builder/NumberField"
+import { OtherUnit } from '../components/path-to-glory-roster-builder/OtherUnit';
+import { Section } from "../components/path-to-glory-roster-builder/Section"
+import { SelectField } from "../components/path-to-glory-roster-builder/SelectField"
+import { Tab } from "../components/path-to-glory-roster-builder/Tab"
+import { Territories } from "../components/path-to-glory-roster-builder/Territories"
+import { TextField } from "../components/path-to-glory-roster-builder/TextField"
+import { TextareaField } from "../components/path-to-glory-roster-builder/TextareaField"
 
 const PathToGloryRosterBuilder = () => {
-  const version = '0.0.2';
+  const version = '0.0.3';
 
   const [isPtgRoster, setIsPtgRoster] = useState(true);
 
@@ -180,10 +25,7 @@ const PathToGloryRosterBuilder = () => {
         <small>Ver {version}</small>
       </div>
 
-      <div tw="flex justify-between space-x-2 mt-2 px-4 border-b w-full">
-        <div css={[tabStyles, isPtgRoster && activeTabStyles]} onClick={() => setIsPtgRoster(true)}>Path to Glory Roster</div>
-        <div css={[tabStyles, isPtgRoster || activeTabStyles]} onClick={() => setIsPtgRoster(false)}>Order of Battle</div>
-      </div>
+      <Tab isPtgRoster={isPtgRoster} setIsPtgRoster={setIsPtgRoster} />
 
       <main>
 
@@ -200,9 +42,7 @@ const PathToGloryRosterBuilder = () => {
           </Section>
 
           <Section label="QUEST LOG" gray>
-            <SelectField label="Current Quest" options={[
-              'Quest1'
-            ]} />
+            <TextField label="Current Quest" />
             <TextField label="Quest Reward" />
             <TextareaField label="Quest Progress" />
           </Section>
@@ -229,41 +69,41 @@ const PathToGloryRosterBuilder = () => {
           </Section>
           
           <Section label="THE VAULT" gray>
-            <div tw="p-1 border-b bg-green-500 text-sm">Bonus Artefacts of Power</div>
+            <FieldsetTitle dark>Bonus Artefacts of Power</FieldsetTitle>
             <TextField label="1" />
             <TextField label="2" />
             <TextField label="3" />
             <TextField label="4" />
             <TextField label="5" />
             <TextField label="6" />
-            <div tw="p-1 border-b bg-green-500 text-sm">Bonus Spells</div>
+            <FieldsetTitle dark>Bonus Spells</FieldsetTitle>
             <TextField label="1" />
             <TextField label="2" />
             <TextField label="3" />
             <TextField label="4" />
             <TextField label="5" />
             <TextField label="6" />
-            <div tw="p-1 border-b bg-green-500 text-sm">Bonus Prayers</div>
+            <FieldsetTitle dark>Bonus Prayers</FieldsetTitle>
             <TextField label="1" />
             <TextField label="2" />
             <TextField label="3" />
             <TextField label="4" />
             <TextField label="5" />
             <TextField label="6" />
-            <div tw="p-1 border-b bg-green-500 text-sm">Bonus Unique Enhancements</div>
+            <FieldsetTitle dark>Bonus Unique Enhancements</FieldsetTitle>
             <TextField label="1" />
             <TextField label="2" />
             <TextField label="3" />
             <TextField label="4" />
             <TextField label="5" />
             <TextField label="6" />
-            <div tw="p-1 border-b bg-green-500 text-sm">Endless Spells / Invocations</div>
+            <FieldsetTitle dark>Endless Spells / Invocations</FieldsetTitle>
             <TextField label="1" />
             <TextField label="2" />
             <TextField label="3" />
-            <div tw="p-1 border-b bg-green-500 text-sm">Triumph</div>
+            <FieldsetTitle dark>Triumph</FieldsetTitle>
             <TextField label="1" />
-            <div tw="p-1 border-b bg-green-500 text-sm">Battalions</div>
+            <FieldsetTitle dark>Battalions</FieldsetTitle>
             <TextField label="1" />
             <TextField label="2" />
             <TextField label="3" />
@@ -291,9 +131,9 @@ const PathToGloryRosterBuilder = () => {
           </Section>
 
           <Section label="HEROES" gray>
-            <Hero />
-            <Hero dark />
-            <Hero />
+            <HeroUnit />
+            <HeroUnit dark />
+            <HeroUnit />
           </Section>
 
           <Section label="OTHER UNITS">
@@ -328,13 +168,3 @@ const PathToGloryRosterBuilder = () => {
 }
 
 export default PathToGloryRosterBuilder
-
-const tabStyles = css`
-  ${tw`relative flex-1 py-1 border rounded rounded-b-none text-sm text-center bg-gray-100`}
-  bottom: -1px;
-`;
-
-const activeTabStyles = css`
-  ${tw`bg-white`}
-  border-bottom-color: white;
-`;
