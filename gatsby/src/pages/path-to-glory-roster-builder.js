@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { createContext, useState } from 'react';
 import tw, { css } from 'twin.macro'
+import deepmerge from 'deepmerge'
 
 import { CheckboxField } from '../components/path-to-glory-roster-builder/CheckboxField';
 import { FieldsetTitle } from '../components/path-to-glory-roster-builder/FieldsetTitle';
@@ -13,8 +14,36 @@ import { Territories } from "../components/path-to-glory-roster-builder/Territor
 import { TextField } from "../components/path-to-glory-roster-builder/TextField"
 import { TextareaField } from "../components/path-to-glory-roster-builder/TextareaField"
 
+import { ptgStateData } from "./ptgStateData";
+import { oobStateData } from "./oobStateData";
+
+export const PtgContext = createContext();
+
 const PathToGloryRosterBuilder = () => {
   const version = '0.0.3';
+
+  const [ptg, setPtg] = useState(ptgStateData);
+  const [oob, setOob] = useState(oobStateData);
+
+  const handleInputChange = e => {
+    const target = e.target;
+    console.log('handleChange');
+    const nameArray = target.name.split('.');
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    let inputData = {};
+
+    // 末尾から（深い階層から）再帰的にオブジェクトを作っていく
+    const generateDataObject = (nameArray, value, child) => {
+      const key = nameArray.pop();
+      inputData = {[key]: child || value};
+      if (nameArray.length) generateDataObject(nameArray, value, inputData);
+    };
+
+    generateDataObject(nameArray, value);
+    console.log(inputData);
+    setPtg(deepmerge(ptg, inputData));
+    console.log(ptg);
+  }
 
   const [isPtgRoster, setIsPtgRoster] = useState(true);
 
@@ -28,96 +57,73 @@ const PathToGloryRosterBuilder = () => {
       <Tab isPtgRoster={isPtgRoster} setIsPtgRoster={setIsPtgRoster} />
 
       <main>
+        <input type="text" name="hoge.fuga.hage.mage" value="うまま" onChange={handleInputChange} />
+        <div onClick={() => console.log(ptg)}>プレイヤー名</div>
 
+        <PtgContext.Provider value={ptg}>
         <div css={isPtgRoster ? tw`block` : tw`hidden`}>
           <Section>
-            <TextField label="Player Name" />
-            <TextField label="Army Name" />
-            <TextField label="Faction" />
-            <TextField label="Subfaction" />
-            <TextField label="Realm of Origin" />
-            <SelectField label="Starting Size" options={[
+            <TextField label="Player Name" name="playerName" value={ptg.playerName} onUpdate={handleInputChange} />
+            <TextField label="Army Name" name="armyName" value={ptg.armyName} onUpdate={handleInputChange} />
+            <TextField label="Faction" name="faction" value={ptg.faction} onUpdate={handleInputChange} />
+            <TextField label="Subfaction" name="subfaction" value={ptg.subfaction} onUpdate={handleInputChange} />
+            <TextField label="Realm of Origin" name="realmOfOrigin" value={ptg.realmOfOrigin} onUpdate={handleInputChange} />
+            <SelectField label="Starting Size" name="armyName" options={[
               600, 1000, 2000, 2500
             ]} />
           </Section>
 
           <Section label="QUEST LOG" gray>
-            <TextField label="Current Quest" />
-            <TextField label="Quest Reward" />
-            <TextareaField label="Quest Progress" />
+            <TextField label="Current Quest" name="questLog.current" value={ptg.questLog.current} onUpdate={handleInputChange} />
+            <TextField label="Quest Reward" name="questLog.reward" value={ptg.questLog.reward} onUpdate={handleInputChange} />
+            <TextareaField label="Quest Progress" name="questLog.progress" value={ptg.questLog.progress} onUpdate={handleInputChange} />
           </Section>
           
           <Section label="GLORY POINTS">
-            <NumberField label="Glory Points" min="0" value="0" />
+            <NumberField label="Glory Points" min="0" name="gloryPoints" value={ptg.gloryPoints} onUpdate={handleInputChange} />
           </Section>
           
           <Section label="STRONGHOLD" gray>
-            <TextField label="Name" />
-            <TextField label="Barracks" />
+            <TextField label="Name" name="stronghold.name" value={ptg.stronghold.name} onUpdate={handleInputChange} />
+            <NumberField label="Barracks" min="0" name="stronghold.barracks" value={ptg.stronghold.barracks} onUpdate={handleInputChange} />
             <div tw="flex">
-              <div tw="w-1/2"><CheckboxField label="Inposing" /></div>
-              <div tw="w-1/2"><CheckboxField label="Mighty" /></div>
+              <div tw="w-1/2"><CheckboxField label="Imposing" name="stronghold.hasImposing" checked={ptg.stronghold.hasImposing} onUpdate={handleInputChange} /></div>
+              <div tw="w-1/2"><CheckboxField label="Mighty" name="stronghold.hasMighty" checked={ptg.stronghold.hasMighty} onUpdate={handleInputChange} /></div>
             </div>
           </Section>
           
           <Section label="ARCHIVEMENTS">
             {/* TODO: 見出し幅を長くする */}
-            <NumberField label="Battles Fought" min="0" value="0" />
-            <NumberField label="Victories Won" min="0" value="0" />
-            <NumberField label="Quests Completed" min="0" value="0" />
-            <NumberField label="Enemy Heroes Slain" min="0" value="0" />
+            <NumberField label="Battles Fought" min="0" name="archivements.battleFought" value={ptg.archivements.battleFought} onUpdate={handleInputChange} />
+            <NumberField label="Victories Won" min="0" name="archivements.victoriesWon" value={ptg.archivements.victoriesWon} onUpdate={handleInputChange} />
+            <NumberField label="Quests Completed" min="0" name="archivements.questsCompleted" value={ptg.archivements.questsCompleted} onUpdate={handleInputChange} />
+            <NumberField label="Enemy Heroes Slain" min="0" name="archivements.enemyHeroesSlain" value={ptg.archivements.enemyHeroesSlain} onUpdate={handleInputChange} />
           </Section>
           
           <Section label="THE VAULT" gray>
             <FieldsetTitle dark>Bonus Artefacts of Power</FieldsetTitle>
-            <TextField label="1" />
-            <TextField label="2" />
-            <TextField label="3" />
-            <TextField label="4" />
-            <TextField label="5" />
-            <TextField label="6" />
+            { [...Array(6)].map((_, i) => <TextField label={i + 1} name={`theVault.artefact${i + 1}`} value={ptg.theVault[`artefact${i + 1}`]} onUpdate={handleInputChange} />)}
             <FieldsetTitle dark>Bonus Spells</FieldsetTitle>
-            <TextField label="1" />
-            <TextField label="2" />
-            <TextField label="3" />
-            <TextField label="4" />
-            <TextField label="5" />
-            <TextField label="6" />
+            { [...Array(6)].map((_, i) => <TextField label={i + 1} name={`theVault.spell${i + 1}`} value={ptg.theVault[`spell${i + 1}`]} onUpdate={handleInputChange} />)}
             <FieldsetTitle dark>Bonus Prayers</FieldsetTitle>
-            <TextField label="1" />
-            <TextField label="2" />
-            <TextField label="3" />
-            <TextField label="4" />
-            <TextField label="5" />
-            <TextField label="6" />
+            { [...Array(6)].map((_, i) => <TextField label={i + 1} name={`theVault.prayer${i + 1}`} value={ptg.theVault[`prayer${i + 1}`]} onUpdate={handleInputChange} />)}
             <FieldsetTitle dark>Bonus Unique Enhancements</FieldsetTitle>
-            <TextField label="1" />
-            <TextField label="2" />
-            <TextField label="3" />
-            <TextField label="4" />
-            <TextField label="5" />
-            <TextField label="6" />
+            { [...Array(6)].map((_, i) => <TextField label={i + 1} name={`theVault.uniqueEnhancement${i + 1}`} value={ptg.theVault[`uniqueEnhancement${i + 1}`]} onUpdate={handleInputChange} />)}
             <FieldsetTitle dark>Endless Spells / Invocations</FieldsetTitle>
-            <TextField label="1" />
-            <TextField label="2" />
-            <TextField label="3" />
+            { [...Array(3)].map((_, i) => <TextField label={i + 1} name={`theVault.endlessSpell${i + 1}`} value={ptg.theVault[`endlessSpell${i + 1}`]} onUpdate={handleInputChange} />)}
             <FieldsetTitle dark>Triumph</FieldsetTitle>
-            <TextField label="1" />
+            <TextField label="1" name="theVault.triumph" value={ptg.theVault.triumph} onUpdate={handleInputChange} />
             <FieldsetTitle dark>Battalions</FieldsetTitle>
-            <TextField label="1" />
-            <TextField label="2" />
-            <TextField label="3" />
-            <TextField label="4" />
-            <TextField label="5" />
-            <TextField label="6" />
+            { [...Array(6)].map((_, i) => <TextField label={i + 1} name={`theVault.battalion${i + 1}`} value={ptg.theVault[`battalion${i + 1}`]} onUpdate={handleInputChange} />)}
           </Section>
 
           <Section label="TERRITORIES">
-            <Territories label="Stronghold Territories" />
-            <Territories label="Imposing Stronghold Territories" />
-            <Territories label="Mighty Stronghold Territories" />
+            <Territories label="Stronghold Territories" category="stronghold" onUpdate={handleInputChange} />
+            <Territories label="Imposing Stronghold Territories" category="imposing" onUpdate={handleInputChange} />
+            <Territories label="Mighty Stronghold Territories" category="mighty" onUpdate={handleInputChange} />
           </Section>
         </div>
+        </PtgContext.Provider>
 
         <div css={isPtgRoster ? tw`hidden` : tw`block`}>
           <Section label="WARLORD">

@@ -7,7 +7,7 @@ import { Label } from "./Label"
 export const SelectField = ({label, dark, options}) => {
   const optionJSX = options.map((option) => {
     return (
-      <option value={option}>{option}</option>
+      <option value={option} key={option}>{option}</option>
     );
   });
   const Options = () => {

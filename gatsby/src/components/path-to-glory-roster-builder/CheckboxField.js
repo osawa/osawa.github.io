@@ -3,12 +3,12 @@ import tw, { css } from 'twin.macro'
 
 import { Label } from "./Label"
 
-export const CheckboxField = ({label, dark}) => {
+export const CheckboxField = ({label, dark, name, checked, onUpdate}) => {
   return (
     <div tw="flex border-b">
       <Label tw="w-2/3" dark={dark}>{label}</Label>
       <div css={bodyStyles}>
-        <input type="checkbox" tw="block" />
+        <input type="checkbox" tw="block" name={name} checked={checked} onChange={onUpdate} />
       </div>
     </div>
   );

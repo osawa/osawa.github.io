@@ -5,7 +5,8 @@ import { FieldsetTitle } from "./FieldsetTitle"
 import { Label } from "./Label"
 import { Territory } from "./Territory"
 
-export const Territories = ({label}) => {
+export const Territories = ({children, label, category, onUpdate}) => {
+
   return (
     <>
       <FieldsetTitle dark>{label}</FieldsetTitle>
@@ -14,9 +15,9 @@ export const Territories = ({label}) => {
         <Label tw="w-1/3">Territory Type</Label>
         <Label tw="w-1/3">Upgraded</Label>
       </div>
-      <Territory />
-      <Territory />
-      <Territory />
+      <Territory category={category} id="1" onUpdate={onUpdate} />
+      <Territory category={category} id="2" onUpdate={onUpdate} />
+      <Territory category={category} id="3" onUpdate={onUpdate} />
     </>
   );
 }
