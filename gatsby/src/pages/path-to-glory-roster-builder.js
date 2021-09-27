@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import tw, { css } from 'twin.macro'
 import deepmerge from 'deepmerge'
 
@@ -23,7 +23,31 @@ const PathToGloryRosterBuilder = () => {
   const version = '0.0.3';
 
   const [ptg, setPtg] = useState(ptgStateData);
-  const [oob, setOob] = useState(oobStateData);
+  const [oob, setOob] = useState();
+  const [ptgJson, setPtgJson] = useState();
+
+  // NOTE: Gatsbyのビルド時にエラーが出るのでuseEffect内に避難
+  useEffect(() => {
+    // ストレージに何もないとき、localStorageに初期データを格納
+    if (!localStorage.getItem('PtG')) {
+      localStorage.setItem('PtG', JSON.stringify(ptgStateData));
+    }
+  });
+
+  const load = () => {
+    const storageData = JSON.parse(localStorage.getItem('PtG'));
+    setPtg(storageData);
+  }
+  const save = () => {
+    localStorage.setItem('PtG', JSON.stringify(ptg));
+  }
+
+  const setPtgToStorage = (inputData) => {
+    const data = deepmerge(ptg, inputData);
+    console.log(inputData);
+    setPtg(data); // ここでドカンとレンダリングされてしまう
+    console.log(ptg);
+  }
 
   const handleInputChange = e => {
     const target = e.target;
@@ -40,12 +64,11 @@ const PathToGloryRosterBuilder = () => {
     };
 
     generateDataObject(nameArray, value);
-    console.log(inputData);
-    setPtg(deepmerge(ptg, inputData));
-    console.log(ptg);
+    setPtgToStorage(inputData);
   }
 
   const [isPtgRoster, setIsPtgRoster] = useState(true);
+  console.log('RENDERED!');
 
   return (
     <div css={tw`flex flex-col`}>
@@ -53,11 +76,12 @@ const PathToGloryRosterBuilder = () => {
         <h1 css={tw`m-0 text-sm`}>WH:AoS 「栄光への道」ロスタービルダー</h1>
         <small>Ver {version}</small>
       </div>
+        <div onClick={load}>LOAD</div>
+        <div onClick={save}>SAVE</div>
 
       <Tab isPtgRoster={isPtgRoster} setIsPtgRoster={setIsPtgRoster} />
 
       <main>
-        <input type="text" name="hoge.fuga.hage.mage" value="うまま" onChange={handleInputChange} />
         <div onClick={() => console.log(ptg)}>プレイヤー名</div>
 
         <PtgContext.Provider value={ptg}>
