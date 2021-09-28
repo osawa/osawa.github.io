@@ -1,6 +1,6 @@
 ---
 title: 【AoS】経済的にストキャスを組みたい
-date: "2021-07-05"
+date: "2021-09-18"
 tags: ['warhammer', 'aos', '3rd-edition', 'stormcast-eternals']
 description: お金がないしメインアーミーではないが、スタートセットでそれなりの量を保持しているのでアーミー組んでしまいたい
 ---
