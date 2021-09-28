@@ -5,6 +5,7 @@ import deepmerge from 'deepmerge'
 import { CheckboxField } from '../components/path-to-glory-roster-builder/CheckboxField';
 import { FieldsetTitle } from '../components/path-to-glory-roster-builder/FieldsetTitle';
 import { HeroUnit } from '../components/path-to-glory-roster-builder/HeroUnit';
+import { Label } from "../components/path-to-glory-roster-builder/Label"
 import { NumberField } from "../components/path-to-glory-roster-builder/NumberField"
 import { OtherUnit } from '../components/path-to-glory-roster-builder/OtherUnit';
 import { Section } from "../components/path-to-glory-roster-builder/Section"
@@ -15,7 +16,6 @@ import { TextField } from "../components/path-to-glory-roster-builder/TextField"
 import { TextareaField } from "../components/path-to-glory-roster-builder/TextareaField"
 
 import { ptgStateData } from "./ptgStateData";
-import { oobStateData } from "./oobStateData";
 
 export const PtgContext = createContext();
 
@@ -23,7 +23,6 @@ const PathToGloryRosterBuilder = () => {
   const version = '0.0.3';
 
   const [ptg, setPtg] = useState(ptgStateData);
-  const [oob, setOob] = useState();
   const [ptgJson, setPtgJson] = useState();
 
   // NOTE: Gatsbyのビルド時にエラーが出るのでuseEffect内に避難
@@ -35,14 +34,14 @@ const PathToGloryRosterBuilder = () => {
   });
 
   const load = () => {
-    const storageData = JSON.parse(localStorage.getItem('PtG'));
-    setPtg(storageData);
+    setPtg(JSON.parse(localStorage.getItem('PtG')));
   }
   const save = () => {
     localStorage.setItem('PtG', JSON.stringify(ptg));
   }
 
-  const setPtgToStorage = (inputData) => {
+  const setDataToStorage = (inputData) => {
+    console.log('setDataToStorage');
     const data = deepmerge(ptg, inputData);
     console.log(inputData);
     setPtg(data); // ここでドカンとレンダリングされてしまう
@@ -50,8 +49,8 @@ const PathToGloryRosterBuilder = () => {
   }
 
   const handleInputChange = e => {
-    const target = e.target;
     console.log('handleChange');
+    const target = e.target;
     const nameArray = target.name.split('.');
     const value = target.type === 'checkbox' ? target.checked : target.value;
     let inputData = {};
@@ -64,7 +63,7 @@ const PathToGloryRosterBuilder = () => {
     };
 
     generateDataObject(nameArray, value);
-    setPtgToStorage(inputData);
+    setDataToStorage(inputData);
   }
 
   const [isPtgRoster, setIsPtgRoster] = useState(true);
@@ -76,14 +75,15 @@ const PathToGloryRosterBuilder = () => {
         <h1 css={tw`m-0 text-sm`}>WH:AoS 「栄光への道」ロスタービルダー</h1>
         <small>Ver {version}</small>
       </div>
-        <div onClick={load}>LOAD</div>
-        <div onClick={save}>SAVE</div>
+      <div tw="mt-2 flex space-x-4 justify-center">
+        <div tw="px-2 border border-yellow-400 bg-yellow-300 text-sm cursor-pointer" onClick={load}>LOAD</div>
+        <div tw="px-2 border border-yellow-400 bg-yellow-300 text-sm cursor-pointer" onClick={save}>SAVE</div>
+        {/* <div tw="px-2 border border-gray-400 bg-gray-300 text-sm" onClick={() => console.log(ptg)}>CONSOLE</div> */}
+      </div>
 
       <Tab isPtgRoster={isPtgRoster} setIsPtgRoster={setIsPtgRoster} />
 
       <main>
-        <div onClick={() => console.log(ptg)}>プレイヤー名</div>
-
         <PtgContext.Provider value={ptg}>
         <div css={isPtgRoster ? tw`block` : tw`hidden`}>
           <Section>
@@ -92,12 +92,12 @@ const PathToGloryRosterBuilder = () => {
             <TextField label="Faction" name="faction" value={ptg.faction} onUpdate={handleInputChange} />
             <TextField label="Subfaction" name="subfaction" value={ptg.subfaction} onUpdate={handleInputChange} />
             <TextField label="Realm of Origin" name="realmOfOrigin" value={ptg.realmOfOrigin} onUpdate={handleInputChange} />
-            <SelectField label="Starting Size" name="armyName" options={[
+            <SelectField label="Starting Size" name="startingSize" value={ptg.startingSize} options={[
               600, 1000, 2000, 2500
-            ]} />
+            ]} onUpdate={handleInputChange} />
           </Section>
 
-          <Section label="QUEST LOG" gray>
+          <Section label="QUEST LOG">
             <TextField label="Current Quest" name="questLog.current" value={ptg.questLog.current} onUpdate={handleInputChange} />
             <TextField label="Quest Reward" name="questLog.reward" value={ptg.questLog.reward} onUpdate={handleInputChange} />
             <TextareaField label="Quest Progress" name="questLog.progress" value={ptg.questLog.progress} onUpdate={handleInputChange} />
@@ -107,7 +107,7 @@ const PathToGloryRosterBuilder = () => {
             <NumberField label="Glory Points" min="0" name="gloryPoints" value={ptg.gloryPoints} onUpdate={handleInputChange} />
           </Section>
           
-          <Section label="STRONGHOLD" gray>
+          <Section label="STRONGHOLD">
             <TextField label="Name" name="stronghold.name" value={ptg.stronghold.name} onUpdate={handleInputChange} />
             <NumberField label="Barracks" min="0" name="stronghold.barracks" value={ptg.stronghold.barracks} onUpdate={handleInputChange} />
             <div tw="flex">
@@ -124,7 +124,7 @@ const PathToGloryRosterBuilder = () => {
             <NumberField label="Enemy Heroes Slain" min="0" name="archivements.enemyHeroesSlain" value={ptg.archivements.enemyHeroesSlain} onUpdate={handleInputChange} />
           </Section>
           
-          <Section label="THE VAULT" gray>
+          <Section label="THE VAULT">
             <FieldsetTitle dark>Bonus Artefacts of Power</FieldsetTitle>
             { [...Array(6)].map((_, i) => <TextField label={i + 1} name={`theVault.artefact${i + 1}`} value={ptg.theVault[`artefact${i + 1}`]} onUpdate={handleInputChange} />)}
             <FieldsetTitle dark>Bonus Spells</FieldsetTitle>
@@ -147,41 +147,52 @@ const PathToGloryRosterBuilder = () => {
             <Territories label="Mighty Stronghold Territories" category="mighty" onUpdate={handleInputChange} />
           </Section>
         </div>
-        </PtgContext.Provider>
 
         <div css={isPtgRoster ? tw`hidden` : tw`block`}>
           <Section label="WARLORD">
-            <TextField label="Name" />
-            <TextField label="Warscroll" />
-            <TextField label="Command Trait" />
-            <TextareaField label="Core Enhancements / Notes" />
-            <TextField label="Injury" />
-            <TextField label="Renown Points" />
-            <NumberField label="Points" min="0" step="5" />
+            <TextField label="Name" name="warlord.name" value={ptg.warlord.name} onUpdate={handleInputChange}  />
+            <TextField label="Warscroll" name="warlord.warscroll" value={ptg.warlord.warscroll} onUpdate={handleInputChange}  />
+            <TextField label="Command Trait" name="warlord.commandTrait" value={ptg.warlord.commandTrait} onUpdate={handleInputChange}  />
+            <TextareaField label="Core Enhancements / Notes" name="warlord.coreEnhancements" value={ptg.warlord.coreEnhancements} onUpdate={handleInputChange}  />
+            <TextField label="Injury" name="warlord.injury" value={ptg.warlord.injury} onUpdate={handleInputChange}  />
+            <div tw="flex">
+              <div tw="flex border-b w-1/2">
+                <Label tw="w-2/3">Renown Points</Label>
+                <div css={pointsBodyStyles}>
+                  <input type="number" min="0" step="5" css={pointsInputStyles} name="warlord.renownPoints" value={ptg.warlord.renownPoints} onChange={handleInputChange} />
+                </div>
+              </div>
+              <div tw="flex border-b w-1/2">
+                <Label tw="w-2/3">Points</Label>
+                <div css={pointsBodyStyles}>
+                  <input type="number" min="0" step="5" css={pointsInputStyles} name="warlord.points" value={ptg.warlord.points} onChange={handleInputChange} />
+                </div>
+              </div>
+            </div>
           </Section>
 
-          <Section label="HEROES" gray>
-            <HeroUnit />
-            <HeroUnit dark />
-            <HeroUnit />
+          <Section label="HEROES">
+            <HeroUnit id="1" onUpdate={handleInputChange} />
+            <HeroUnit id="2" onUpdate={handleInputChange} dark />
+            <HeroUnit id="3" onUpdate={handleInputChange} />
           </Section>
 
           <Section label="OTHER UNITS">
-            <OtherUnit />
-            <OtherUnit dark />
-            <OtherUnit />
-            <OtherUnit dark />
-            <OtherUnit />
-            <OtherUnit dark />
-            <OtherUnit />
-            <OtherUnit dark />
-            <OtherUnit />
-            <OtherUnit dark />
-            <OtherUnit />
-            <OtherUnit dark />
+            <OtherUnit id="1" onUpdate={handleInputChange} />
+            <OtherUnit id="2" onUpdate={handleInputChange} dark />
+            <OtherUnit id="3" onUpdate={handleInputChange} />
+            <OtherUnit id="4" onUpdate={handleInputChange} dark />
+            <OtherUnit id="5" onUpdate={handleInputChange} />
+            <OtherUnit id="6" onUpdate={handleInputChange} dark />
+            <OtherUnit id="7" onUpdate={handleInputChange} />
+            <OtherUnit id="8" onUpdate={handleInputChange} dark />
+            <OtherUnit id="9" onUpdate={handleInputChange} />
+            <OtherUnit id="10" onUpdate={handleInputChange} dark />
+            <OtherUnit id="11" onUpdate={handleInputChange} />
+            <OtherUnit id="12" onUpdate={handleInputChange} dark />
           </Section>
 
-          <Section label="ORDER OF BATTLE LIMITS" gray>
+          <Section label="ORDER OF BATTLE LIMITS">
             <NumberField label="Total Units" min="6" value="6" />
             <NumberField label="Heroes" min="3" value="3" />
             <NumberField label="Monsters" min="1" value="1" />
@@ -192,9 +203,18 @@ const PathToGloryRosterBuilder = () => {
             <NumberField label="Allies" min="1" value="1" />
           </Section>
         </div>
+        </PtgContext.Provider>
       </main>
     </div>
   )
 }
 
 export default PathToGloryRosterBuilder
+
+const pointsBodyStyles = css`
+  ${tw`w-1/3 flex items-center justify-center bg-white`}
+`;
+
+const pointsInputStyles = css`
+  ${tw`px-1 w-full h-full text-sm`}
+`;
