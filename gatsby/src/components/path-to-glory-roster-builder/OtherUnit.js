@@ -14,7 +14,7 @@ export const OtherUnit = ({id, dark, onUpdate}) => {
     <>
       <TextField label="ファイター名" name={`otherUnits.unit${id}.name`} value={ptg.otherUnits[unit].name} onUpdate={onUpdate} dark={dark} />
       <TextField label="ウォースクロール" name={`otherUnits.unit${id}.warscroll`} value={ptg.otherUnits[unit].warscroll} onUpdate={onUpdate} dark={dark} />
-      <TextareaField label="歴戦アビリティ / 備考" name={`otherUnits.unit${id}.veteranAbilities`} value={ptg.otherUnits[unit].veteranAbilities} onUpdate={onUpdate} dark={dark} />
+      <TextareaField label='歴戦アビリティ / 備考' name={`otherUnits.unit${id}.veteranAbilities`} value={ptg.otherUnits[unit].veteranAbilities} onUpdate={onUpdate} dark={dark} />
       <div tw="flex">
         <div tw="flex border-b w-1/2">
           <Label tw="w-2/3" dark={dark}>増強</Label>
@@ -57,5 +57,5 @@ const checkboxBoxStyles = css`
 `;
 
 const inputStyles = css`
-  ${tw`px-1 w-full h-full text-sm`}
+  ${tw`px-1 w-full h-full text-xs`}
 `;

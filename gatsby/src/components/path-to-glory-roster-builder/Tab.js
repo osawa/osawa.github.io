@@ -11,7 +11,7 @@ export const Tab = ({isPtgRoster, setIsPtgRoster}) => {
 }
 
 const tabStyles = css`
-  ${tw`relative flex-1 py-1 border rounded rounded-b-none text-sm text-center bg-white cursor-pointer text-gray-500`}
+  ${tw`relative flex-1 py-2 border rounded rounded-b-none text-xs text-center bg-white cursor-pointer text-gray-500`}
   bottom: -1px;
 `;
 

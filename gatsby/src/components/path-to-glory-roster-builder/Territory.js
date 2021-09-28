@@ -28,11 +28,11 @@ export const Territory = ({category, id, onUpdate}) => {
 };
 
 const inputBoxStyles = css`
-${tw`border-r w-1/3 text-sm`}
+${tw`border-r w-1/3 text-xs`}
 `;
 
 const inputStyles = css`
-${tw`p-1 w-full h-full text-sm`}
+${tw`p-1 w-full h-full text-xs`}
 `;
 
 const checkboxBoxStyles = css`

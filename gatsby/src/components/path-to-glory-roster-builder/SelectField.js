@@ -28,5 +28,5 @@ export const SelectField = ({label, name, value, dark, options, onUpdate}) => {
 };
 
 const selectStyles = css`
-  ${tw`block w-full h-full text-sm`}
+  ${tw`block w-full h-full text-xs`}
 `;

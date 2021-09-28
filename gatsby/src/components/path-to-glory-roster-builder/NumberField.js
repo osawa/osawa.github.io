@@ -15,5 +15,5 @@ export const NumberField = ({label, dark, name, value, onUpdate, ...props}) => {
 };
 
 const inputStyles = css`
-  ${tw`block px-1 w-full h-full text-sm`}
+  ${tw`block px-1 w-full h-full text-xs`}
 `;

@@ -15,5 +15,5 @@ export const TextareaField = ({label, dark, name, value, onUpdate}) => {
 };
 
 const inputStyles = css`
-  ${tw`block p-1 w-full h-16 text-sm leading-4`}
+  ${tw`block p-1 w-full h-20 text-xs leading-4`}
 `;
