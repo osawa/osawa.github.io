@@ -1,6 +1,6 @@
 ---
 title: 【AoS】陣営の選択における制限・条件について
-date: "2021-09-18"
+date: "2021-09-28"
 tags: ['warhammer', 'aos', '3rd-edition', 'rules', 'memo']
 description: 2版と3版で陣営選択ルールが微妙に変わっていた
 ---
