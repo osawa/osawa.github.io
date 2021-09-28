@@ -8,5 +8,5 @@ export const Label = ({children, dark, ...props}) => {
 }
 
 const labelStyles = css`
-  ${tw`p-1 border-r text-sm leading-4`}
+  ${tw`p-1 border-r text-sm leading-4 text-xs`}
 `;

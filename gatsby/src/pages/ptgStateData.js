@@ -4,7 +4,7 @@ export const ptgStateData = {
   faction: '',
   subfaction: '',
   realmOfOrigin: '',
-  startingSize: '',
+  startingSize: 'ヴァンガード (600pt)',
   // QUEST LOG
   questLog: {
     current: '',

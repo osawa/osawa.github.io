@@ -4,8 +4,8 @@ import tw, { css } from 'twin.macro'
 export const Tab = ({isPtgRoster, setIsPtgRoster}) => {
   return (
     <div tw="flex justify-between space-x-2 mt-2 px-4 border-b w-full">
-      <div css={[tabStyles, isPtgRoster && activeTabStyles]} onClick={() => setIsPtgRoster(true)}>Path to Glory Roster</div>
-      <div css={[tabStyles, isPtgRoster || activeTabStyles]} onClick={() => setIsPtgRoster(false)}>Order of Battle</div>
+      <div css={[tabStyles, isPtgRoster && activeTabStyles]} onClick={() => setIsPtgRoster(true)}>『栄光への道』ロスター</div>
+      <div css={[tabStyles, isPtgRoster || activeTabStyles]} onClick={() => setIsPtgRoster(false)}>戦闘序列</div>
     </div>
   )
 }
