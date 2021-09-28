@@ -11,11 +11,11 @@ export const Tab = ({isPtgRoster, setIsPtgRoster}) => {
 }
 
 const tabStyles = css`
-  ${tw`relative flex-1 py-1 border rounded rounded-b-none text-sm text-center bg-gray-100 cursor-pointer`}
+  ${tw`relative flex-1 py-1 border rounded rounded-b-none text-sm text-center bg-white cursor-pointer text-gray-500`}
   bottom: -1px;
 `;
 
 const activeTabStyles = css`
-  ${tw`bg-white`}
-  border-bottom-color: white;
+  ${tw`bg-gray-100 text-black`}
+  border-bottom-color: rgba(243, 244, 246, var(--tw-border-opacity));
 `;
