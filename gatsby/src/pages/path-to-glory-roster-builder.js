@@ -15,7 +15,7 @@ import { Territories } from "../components/path-to-glory-roster-builder/Territor
 import { TextField } from "../components/path-to-glory-roster-builder/TextField"
 import { TextareaField } from "../components/path-to-glory-roster-builder/TextareaField"
 
-import { ptgStateData } from "./ptgStateData";
+import { ptgStateData } from "../components/path-to-glory-roster-builder/ptgStateData";
 
 export const PtgContext = createContext();
 
