@@ -1,5 +1,5 @@
 ---
-title: 【Pathfinder: Kingmaker】キャラクタービルドを考える
+title: 【Pathfinder Kingmaker】キャラクタービルドを考える
 date: "2021-09-15"
 description: PathfinderRPG未経験でKingmakerを始めたが、なにもわからないので基礎から学ぶ
 tags:
