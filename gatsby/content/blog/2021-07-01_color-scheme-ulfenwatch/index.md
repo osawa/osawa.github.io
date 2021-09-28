@@ -2,6 +2,7 @@
 title: 【カラースキーム】ウルフェンウォッチ / Ulfenwatch
 date: "2021-07-01"
 tags: ['warhammer', 'color-scheme', 'aos', 'cursed-city', 'memo']
+description: 布の色でトリッキーなことをしたのもあり、忘れないようメモ
 
 ---
 
@@ -43,3 +44,4 @@ tags: ['warhammer', 'color-scheme', 'aos', 'cursed-city', 'memo']
 ## TODO
 * 布の階調が微妙なのでシェイド／グレイズで落ち着けたい
 * 金属の腐食表現（軽めでよい）
+* ブラック・テンプラーは1:1で薄めてもなお濃いというか、金属らしさが損なわれすぎる
