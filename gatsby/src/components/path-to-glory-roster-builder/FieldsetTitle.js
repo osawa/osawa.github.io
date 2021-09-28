@@ -8,5 +8,5 @@ export const FieldsetTitle = ({children, dark, ...props}) => {
 }
 
 const fieldsetTitleStyles = css`
-  ${tw`p-1 border-b text-sm leading-4`}
+  ${tw`p-1 border-b text-sm leading-4 text-xs`}
 `;

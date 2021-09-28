@@ -11,9 +11,9 @@ export const Territories = ({children, label, category, onUpdate}) => {
     <>
       <FieldsetTitle dark>{label}</FieldsetTitle>
       <div tw="flex w-full">
-        <Label tw="w-1/3">Name</Label>
-        <Label tw="w-1/3">Territory Type</Label>
-        <Label tw="w-1/3">Upgraded</Label>
+        <Label tw="w-1/3 text-xs">領地名</Label>
+        <Label tw="w-1/3 text-xs">領地種別</Label>
+        <Label tw="w-1/3 text-xs">アップグレード</Label>
       </div>
       <Territory category={category} id="1" onUpdate={onUpdate} />
       <Territory category={category} id="2" onUpdate={onUpdate} />

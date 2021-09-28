@@ -12,19 +12,19 @@ export const OtherUnit = ({id, dark, onUpdate}) => {
   const unit = `unit${id}`;
   return (
     <>
-      <TextField label="Name" name={`otherUnits.unit${id}.name`} value={ptg.otherUnits[unit].name} onUpdate={onUpdate} dark={dark} />
-      <TextField label="Warscroll" name={`otherUnits.unit${id}.warscroll`} value={ptg.otherUnits[unit].warscroll} onUpdate={onUpdate} dark={dark} />
-      <TextareaField label="Veteran Abilities / Notes" name={`otherUnits.unit${id}.veteranAbilities`} value={ptg.otherUnits[unit].veteranAbilities} onUpdate={onUpdate} dark={dark} />
+      <TextField label="ファイター名" name={`otherUnits.unit${id}.name`} value={ptg.otherUnits[unit].name} onUpdate={onUpdate} dark={dark} />
+      <TextField label="ウォースクロール" name={`otherUnits.unit${id}.warscroll`} value={ptg.otherUnits[unit].warscroll} onUpdate={onUpdate} dark={dark} />
+      <TextareaField label="歴戦アビリティ / 備考" name={`otherUnits.unit${id}.veteranAbilities`} value={ptg.otherUnits[unit].veteranAbilities} onUpdate={onUpdate} dark={dark} />
       <div tw="flex">
         <div tw="flex border-b w-1/2">
-          <Label tw="w-2/3" dark={dark}>Reinforced</Label>
+          <Label tw="w-2/3" dark={dark}>増強</Label>
           <div css={checkboxBoxStyles}>
             <input type="checkbox" tw="block" name={`otherUnits.unit${id}.reinforced2`} checked={ptg.otherUnits[unit].reinforced1} onChange={onUpdate} />
             <input type="checkbox" tw="block" name={`otherUnits.unit${id}.reinforced2`} checked={ptg.otherUnits[unit].reinforced2} onChange={onUpdate} />
           </div>
         </div>
         <div tw="flex border-b w-1/2">
-          <Label tw="w-2/3" dark={dark}>Casualty Score</Label>
+          <Label tw="w-2/3" dark={dark}>損耗スコア</Label>
           <div css={bodyStyles}>
             <input type="number" min="0" step="5" css={inputStyles} name={`otherUnits.unit${id}.casualtyScore`} value={ptg.otherUnits[unit].casualtyScore} onChange={onUpdate} />
           </div>
@@ -32,13 +32,13 @@ export const OtherUnit = ({id, dark, onUpdate}) => {
       </div>
       <div tw="flex">
         <div tw="flex border-b w-1/2">
-          <Label tw="w-2/3" dark={dark}>Renown Points</Label>
+          <Label tw="w-2/3" dark={dark}>名声値</Label>
           <div css={bodyStyles}>
             <input type="number" min="0" step="5" css={inputStyles} name={`otherUnits.unit${id}.renownPoints`} value={ptg.otherUnits[unit].renownPoints} onChange={onUpdate} />
           </div>
         </div>
         <div tw="flex border-b w-1/2">
-          <Label tw="w-2/3" dark={dark}>Points</Label>
+          <Label tw="w-2/3" dark={dark}>ポイント</Label>
           <div css={bodyStyles}>
             <input type="number" min="0" step="5" css={inputStyles} name={`otherUnits.unit${id}.points`} value={ptg.otherUnits[unit].points} onChange={onUpdate} />
           </div>
