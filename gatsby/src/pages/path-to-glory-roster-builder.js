@@ -20,7 +20,7 @@ import { ptgStateData } from "./ptgStateData";
 export const PtgContext = createContext();
 
 const PathToGloryRosterBuilder = () => {
-  const version = '0.0.3';
+  const version = '0.1';
 
   const [ptg, setPtg] = useState(ptgStateData);
   const [ptgJson, setPtgJson] = useState();
@@ -75,9 +75,9 @@ const PathToGloryRosterBuilder = () => {
         <h1 css={tw`m-0 text-sm`}>WH:AoS 「栄光への道」ロスタービルダー</h1>
         <small>Ver {version}</small>
       </div>
-      <div tw="mt-2 flex space-x-4 justify-center">
-        <div tw="px-2 border border-yellow-400 bg-yellow-300 text-sm cursor-pointer" onClick={load}>LOAD</div>
-        <div tw="px-2 border border-yellow-400 bg-yellow-300 text-sm cursor-pointer" onClick={save}>SAVE</div>
+      <div tw="mt-2 flex space-x-8 justify-center">
+        <div tw="px-4 py-1 border border-yellow-400 bg-yellow-300 text-sm cursor-pointer" onClick={load}>LOAD</div>
+        <div tw="px-4 py-1 border border-yellow-400 bg-yellow-300 text-sm cursor-pointer" onClick={save}>SAVE</div>
         {/* <div tw="px-2 border border-gray-400 bg-gray-300 text-sm" onClick={() => console.log(ptg)}>CONSOLE</div> */}
       </div>
 
@@ -216,5 +216,5 @@ const pointsBodyStyles = css`
 `;
 
 const pointsInputStyles = css`
-  ${tw`px-1 w-full h-full text-sm`}
+  ${tw`px-1 w-full h-full text-xs`}
 `;

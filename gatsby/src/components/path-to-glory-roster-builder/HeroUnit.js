@@ -40,5 +40,5 @@ const bodyStyles = css`
 `;
 
 const inputStyles = css`
-  ${tw`px-1 w-full h-full text-sm`}
+  ${tw`px-1 w-full h-full text-xs`}
 `;
