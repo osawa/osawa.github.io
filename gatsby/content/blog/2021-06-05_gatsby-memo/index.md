@@ -27,16 +27,20 @@ Gatsby + Github Pages でブログをつくるぞ
 
 ### ドラフトの実装
 - Frontmatterに`draft`を追加
-- `gatsby-node.js`にあるスキーマに記述を追加
+- `gatsby-node.js`にあるスキーマに`draft: Boolean`を追加
 - `src/pages/index.js`, `templates/blog-post.js`に表示分岐を追加
 
 ### タグの追加
-- Frontmatterにtagsを追加
+- Frontmatterに`tags`を追加
 - `gatsby-node.js`のスキーマに`tags: [String]`を追記
 - 色々わからなかったので \
 diff001a/diff001a-gatsby-blog: my gatsby blog https://github.com/diff001a/diff001a-gatsby-blog \
 を参考に`gatsby-node.js`をいじったり`templates/tag-page.js`をつくったり
   - 雰囲気だけで実装したのであらためて仕組みをじっくり把握する必要がある
+
+### 更新日の追加
+- Frontmatterに`modified_at`を追加
+- `gatsby-node.js`のスキーマに`modified_at: Date @dateformat`を追記
 
 ### Emotionおよびtwin.macroの導入
 - Emotion | Gatsby https://www.gatsbyjs.com/docs/how-to/styling/emotion/
@@ -63,7 +67,7 @@ const hogeStyles = css`
 そもそも継続して書くのかという話はあるが
 
 - [x] カテゴリなりタグなり
-- [ ] パーマリンクの仕様策定（`YYYY-MM-DD_slug`の形がいい気がする）
+- [x] パーマリンクの仕様策定（`YYYY-MM-DD_slug`の形がいい気がする）
 - [ ] 検索ボックス（これはきつそう）
 - [ ] TypeScript導入
 - リデザイン
