@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import tw, { css } from 'twin.macro'
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -35,23 +36,15 @@ const BlogPostTemplate = ({ data, location }) => {
         </footer>
       </article>
       <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
+        <ul tw="flex flex-wrap justify-between list-none p-0 md:flex-nowrap">
+          <li tw="md:w-1/2 pr-1">
             {previous && !previous.frontmatter.draft && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
-          <li>
+          <li tw="md:w-1/2 pl-1">
             {next && !next.frontmatter.draft && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
@@ -93,6 +86,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        draft
       }
     }
     next: markdownRemark(id: { eq: $nextPostId }) {
@@ -101,6 +95,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        draft
       }
     }
   }
