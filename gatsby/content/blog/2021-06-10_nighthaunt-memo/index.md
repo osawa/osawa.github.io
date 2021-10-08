@@ -3,9 +3,8 @@ title: 【AoS】ナイトホーントに関するメモ
 date: "2021-06-10"
 description: 2021-07-24更新、3版対応
 tags: ['warhammer', 'aos', 'nighthaunt', 'memo']
-
+modified_at: 2021-07-24
 ---
-2021-07-24更新、3版対応
 
 ## 傷あたりのコスト
 

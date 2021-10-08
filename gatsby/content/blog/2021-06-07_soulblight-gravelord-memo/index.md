@@ -3,9 +3,8 @@ title: 【AoS】ソウルブライト・グレイヴロードに関するメモ
 date: "2021-06-07"
 description: おもったことをとりあえず列挙
 tags: ['warhammer', 'aos', 'soulblight-gravelords']
-
+modified_at: 2021-10-08
 ---
-8/11更新 ブラックナイトとダイアウルフの比較を追加
 
 そろそろトピックごとに記事わけるべきか
 

@@ -139,6 +139,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       date: Date @dateformat
       draft: Boolean
       tags: [String]
+      modified_at: Date @dateformat
     }
 
     type Fields {

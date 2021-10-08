@@ -3,6 +3,7 @@ title: 【AoS】3版「栄光への道 / Path to Glory」のルールまとめ
 date: "2021-07-20"
 tags: ['warhammer', 'aos', '3rd-edition', 'memo', 'path-to-glory']
 description: メモがまとまってきたので最低限の体裁を整えた
+modified_at: "2021-10-08"
 ---
 
 2021.10.08追記：メモがまとまってきたので最低限の体裁を整えた

@@ -3,6 +3,7 @@ title: 【AoS】【解決】3版エラッタにおける相違点（英日比較
 date: "2021-07-16"
 tags: ['warhammer', 'aos', '3rd-edition', 'memo', 'errata']
 description: いつもの日本語誤訳なのか上書き修正なのか判断がつきづらいためメモ、適宜追加
+modified_at: 2021-09-28
 ---
 
 2021.09.28更新 \

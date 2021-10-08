@@ -5,9 +5,8 @@ description: 実際の手順と困ったところの記録
 tags:
   - gatsby
   - react
-
+modified_at: 2021-08-18
 ---
-2021-08-18 更新 \
 Gatsby + Github Pages でブログをつくるぞ
 
 ## 動機
