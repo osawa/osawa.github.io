@@ -28,12 +28,16 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
+      <p tw="text-sm font-medium">
+        共有しやすいメモとしてのテキスト群<br />
+        Warhammer Age of Sigmar (AoS), Warhammer 40,000 (40k), React, etc
+      </p>
       <Bio />
       <ol tw="m-0 list-none">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
           let draft = post.frontmatter.draft || false
-          let tags = post.frontmatter.tags || [] // ダサいのでやめたい
+          let tags = post.frontmatter.tags
           if (draft !== true) {
             return (
               <li key={post.fields.slug} css={articleStyles}>
@@ -51,8 +55,7 @@ const BlogIndex = ({ data, location }) => {
                     </h2>
                     <small>{post.frontmatter.date}</small>
                   </header>
-                  {/* あるときだけ出したい */}
-                  <Tags data={tags} key="tags" />
+                  { tags && <Tags data={tags} key="tags" /> }
                   <section>
                     <p
                       dangerouslySetInnerHTML={{
