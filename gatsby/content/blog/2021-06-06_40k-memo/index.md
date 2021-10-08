@@ -1,5 +1,5 @@
 ---
-title: Warhammer 40,000に関するメモ
+title: 【40k】Warhammer 40,000 9版に関するメモ
 date: "2021-06-06"
 description: ルール理解が乏しい部分を適宜メモ
 tags: ['warhammer', '40k']

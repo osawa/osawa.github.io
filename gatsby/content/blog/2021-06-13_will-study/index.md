@@ -6,6 +6,7 @@ tags: ['tech', 'javascript', 'react', 'work']
 
 ---
 - React
+  - hooks
   - react-dom
   - react-router-dom
     ```

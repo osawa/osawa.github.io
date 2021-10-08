@@ -1,5 +1,5 @@
 ---
-title: アデプトゥス・メカニカスに関するメモ
+title: 【40k】アデプトゥス・メカニカスに関するメモ
 date: "2021-06-05T00:51:00"
 description: コデックスが複雑怪奇なので理解するためのメモ
 tags: ['warhammer', '40k', 'adeptus-mechanicus']
