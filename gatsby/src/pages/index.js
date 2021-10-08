@@ -99,5 +99,5 @@ export const pageQuery = graphql`
 `
 
 const articleStyles = css`
-  ${tw`m-0 py-8 border-b`}
+  ${tw`m-0 py-8 border-b border-gray-400`}
 `
