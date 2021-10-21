@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-templates-tag-page-js","path":"/tags/kingmaker/","result":{"data":{"site":{"siteMetadata":{"title":"osawa no log","description":"desc"}},"allMarkdownRemark":{"edges":[{"node":{"excerpt":"Pathfinder RPG未経験でKingmakerを始めたが、なにもわからないので基礎から学ぶ  KingmakerというよりはPathfinderの仕様について学ぶことになりそう 基本仕様 アーマークラス（AC…","fields":{"slug":"/2021-09-15_pfkm-character-build/"},"frontmatter":{"date":"2021-09-15","title":"【Pathfinder Kingmaker】キャラクタービルドを考える","description":"PathfinderRPG未経験でKingmakerを始めたが、なにもわからないので基礎から学ぶ","tags":["pathfinder","kingmaker","memo"]}}}]}},"pageContext":{"slug":"kingmaker"}},"staticQueryHashes":["2841359383","3257411868"]}
+{
+    "componentChunkName": "component---src-templates-tag-page-js",
+    "path": "/tags/kingmaker/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"osawa no log","description":"desc"}},"allMarkdownRemark":{"edges":[{"node":{"excerpt":"Pathfinder RPG未経験でKingmakerを始めたが、なにもわからないので基本仕様から学ぶ  疑問点を適宜メモ 参考：パスファインダーRPG参照ルール集 日本語版 能力値 能力 内容 筋力（STR…","fields":{"slug":"/2021-10-07_pfkm-learn-basics/"},"frontmatter":{"date":"2021-10-07","title":"【Pathfinder Kingmaker】というかPathfinder RPGの基礎を学ぶ","description":"Pathfinder RPG未経験でKingmakerを始めたが、なにもわからないので基本仕様から学ぶ","tags":["pathfinder","kingmaker","memo"]}}}]}},"pageContext":{"slug":"kingmaker"}},
+    "staticQueryHashes": ["2841359383","3257411868"]}
