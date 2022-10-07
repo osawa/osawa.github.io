@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tag-page-js",
+    "path": "/tags/impression/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"osawa no log","description":"desc"}},"allMarkdownRemark":{"edges":[{"node":{"excerpt":"2022年6月に国内発売されたナイトホーントのバトルトームにおける所感 前提 新バトルトームでのプレイ回数は3回（2000pt x 2、1000pt x 1） うち、サブファクションはエメラルドホスト2回、スカーレットドゥーム…","fields":{"slug":"/2022-10-07_nighthaunt-impression/"},"frontmatter":{"date":"2022-10-07","title":"【AoS】ナイトホーント新バトルトームにおける所感","description":"2022年6月に国内発売されたナイトホーントのバトルトームにおける所感","tags":["warhammer","aos","nighthaunt","impression"]}}}]}},"pageContext":{"slug":"impression"}},
+    "staticQueryHashes": ["2841359383","3257411868"]}
