@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tag-page-js",
+    "path": "/tags/american-football/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"osawa no log","description":"desc"}},"allMarkdownRemark":{"edges":[{"node":{"excerpt":"ハマってみようと思ったもののフックがないと大変なので目立つ選手から注目してみる 取り急ぎNFL公式サイト日本語版のスタッツ上位の選手をみてみる QB Matthew Stafford…","fields":{"slug":"/2021-11-12_nfl-players-memo/"},"frontmatter":{"date":"2021-10-07","title":"【NFL】目立つ選手をおぼえるためのメモ","description":"ハマってみようと思ったもののフックがないと大変なので目立つ選手から注目してみる","tags":["NFL","american-football","memo"]}}}]}},"pageContext":{"slug":"american-football"}},
+    "staticQueryHashes": ["2841359383","3257411868"]}
