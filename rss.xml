@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[osawa no log]]></title><description><![CDATA[desc]]></description><link>https://osawa/github.io/blog</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 22 May 2023 07:25:05 GMT</lastBuildDate><item><title><![CDATA[格ゲーをはじめる：第2回「SFV基礎練習」]]></title><description><![CDATA[前回からの進捗まとめ 毎日とはいかないながら、たまに小一時間程度トレモで基礎練習を行っていた 基本コンボ（かんたんめなやつ）、対空（ついでに投げ抜け） ギルティギア・ストライヴ（以下GGST）のクロスプレイにかかるオープンβ…]]></description><link>https://osawa/github.io/blog/2022-10-21_start-fighting-games_2/</link><guid isPermaLink="false">https://osawa/github.io/blog/2022-10-21_start-fighting-games_2/</guid><pubDate>Fri, 21 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;前回からの進捗まとめ&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[osawa no log]]></title><description><![CDATA[desc]]></description><link>https://osawa/github.io/blog</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 22 May 2023 07:37:39 GMT</lastBuildDate><item><title><![CDATA[格ゲーをはじめる：第2回「SFV基礎練習」]]></title><description><![CDATA[前回からの進捗まとめ 毎日とはいかないながら、たまに小一時間程度トレモで基礎練習を行っていた 基本コンボ（かんたんめなやつ）、対空（ついでに投げ抜け） ギルティギア・ストライヴ（以下GGST）のクロスプレイにかかるオープンβ…]]></description><link>https://osawa/github.io/blog/2022-10-21_start-fighting-games_2/</link><guid isPermaLink="false">https://osawa/github.io/blog/2022-10-21_start-fighting-games_2/</guid><pubDate>Fri, 21 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;前回からの進捗まとめ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;毎日とはいかないながら、たまに小一時間程度トレモで基礎練習を行っていた&lt;/p&gt;
@@ -1685,10 +1685,13 @@ A：各陣営にはピッチバトル・プロフィール表が用意されて�
 &lt;li&gt;明言されていないが、リーダーの負傷と同様、不可としたほうがよさそう&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[【AoS】【解決】3版エラッタにおける相違点（英日比較）]]></title><description><![CDATA[2021.09.28更新  8/27および9/3の英日エラッタ更新によりすべて解決  しかし新着を示すマゼンタ文字にはならず、すべて元からそうであったようにサイレント修正がなされた……  そういう不誠実なことはしないでほしい…… 2021/07/1…]]></description><link>https://osawa/github.io/blog/2021-07-16_aos-3rd-edition-eratta-contradictions/</link><guid isPermaLink="false">https://osawa/github.io/blog/2021-07-16_aos-3rd-edition-eratta-contradictions/</guid><pubDate>Fri, 16 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;2021.09.28更新 &lt;br&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[(Outdated) 【AoS】【解決】3版エラッタにおける相違点（英日比較）]]></title><description><![CDATA[2021.09.28更新  8/27および9/3の英日エラッタ更新によりすべて解決  しかし新着を示すマゼンタ文字にはならず、すべて元からそうであったようにサイレント修正がなされた……  そういう不誠実なことはしないでほしい！ 2021/07/1…]]></description><link>https://osawa/github.io/blog/2021-07-16_aos-3rd-edition-eratta-contradictions/</link><guid isPermaLink="false">https://osawa/github.io/blog/2021-07-16_aos-3rd-edition-eratta-contradictions/</guid><pubDate>Fri, 16 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;span style=&quot;color:red;font-weight:bold;&quot;&gt;
+※この記事の内容はすべて解決済み、あるいは古い内容です
+&lt;/span&gt;
+&lt;p&gt;2021.09.28更新 &lt;br&gt;
 8/27および9/3の英日エラッタ更新によりすべて解決 &lt;br&gt;
 しかし新着を示すマゼンタ文字にはならず、すべて元からそうであったようにサイレント修正がなされた…… &lt;br&gt;
-そういう不誠実なことはしないでほしい……&lt;/p&gt;
+そういう不誠実なことはしないでほしい！&lt;/p&gt;
 &lt;p&gt;2021/07/16現在 &lt;br&gt;
 いつもの日本語誤訳なのか上書き修正なのか判断がつきづらいためメモ、適宜追加&lt;/p&gt;
 &lt;h2&gt;コアルール / Warhammer Age of Sigmar: Core Rules&lt;/h2&gt;
@@ -1707,6 +1710,8 @@ A：各陣営にはピッチバトル・プロフィール表が用意されて�
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span style=&quot;color:red;font-weight:bold;&quot;&gt;※以下はバトルトームが更新されたため、参照データとして適切なものではありません&lt;/span&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2&gt;バトルトーム：ビースト・オブ・ケイオス / Battletome: Beasts of Chaos&lt;/h2&gt;
 &lt;ul&gt;

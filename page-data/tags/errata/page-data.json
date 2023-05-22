@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-tag-page-js",
     "path": "/tags/errata/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"osawa no log","description":"desc"}},"allMarkdownRemark":{"edges":[{"node":{"excerpt":"2021.09.28更新  8/27および9/3の英日エラッタ更新によりすべて解決  しかし新着を示すマゼンタ文字にはならず、すべて元からそうであったようにサイレント修正がなされた……  そういう不誠実なことはしないでほしい…… 2021/07/1…","fields":{"slug":"/2021-07-16_aos-3rd-edition-eratta-contradictions/"},"frontmatter":{"date":"2021-07-16","title":"【AoS】【解決】3版エラッタにおける相違点（英日比較）","description":"8/27および9/3の英日エラッタ更新によりすべて解決","tags":["warhammer","aos","3rd-edition","memo","errata"]}}}]}},"pageContext":{"slug":"errata"}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"osawa no log","description":"desc"}},"allMarkdownRemark":{"edges":[{"node":{"excerpt":"2021.09.28更新  8/27および9/3の英日エラッタ更新によりすべて解決  しかし新着を示すマゼンタ文字にはならず、すべて元からそうであったようにサイレント修正がなされた……  そういう不誠実なことはしないでほしい！ 2021/07/1…","fields":{"slug":"/2021-07-16_aos-3rd-edition-eratta-contradictions/"},"frontmatter":{"date":"2021-07-16","title":"(Outdated) 【AoS】【解決】3版エラッタにおける相違点（英日比較）","description":"8/27および9/3の英日エラッタ更新によりすべて解決","tags":["warhammer","aos","3rd-edition","memo","errata"]}}}]}},"pageContext":{"slug":"errata"}},
     "staticQueryHashes": ["2841359383","3257411868"]}
