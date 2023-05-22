@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-tag-page-js",
     "path": "/tags/beasts-of-chaos/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"osawa no log","description":"desc"}},"allMarkdownRemark":{"edges":[{"node":{"excerpt":"おもったことをとりあえず列挙 2023年のバトルトーム更新について 2023年5月現在未プレイのため、プレイしたら記事として独立させるつもり フルリニューアルといっていいくらい戦闘特性が変わったので、過去のBoC…","fields":{"slug":"/2021-06-24_beasts-of-chaos-memo/"},"frontmatter":{"date":"2021-06-24","title":"【AoS】ビースト・オブ・ケイオスに関する所感","description":"おもったことをとりあえず列挙","tags":["warhammer","aos","beasts-of-chaos"]}}}]}},"pageContext":{"slug":"beasts-of-chaos"}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"osawa no log","description":"desc"}},"allMarkdownRemark":{"edges":[{"node":{"excerpt":"おもったことをとりあえず列挙\n※加筆修正により内容が散らかりすぎたので、全面的に書き直す可能性大 2023年のバトルトーム更新について 2023年5月現在未プレイのため、プレイしたら記事として独立させるつもり フルリニューアルといっていいくらい戦闘特性が変わったので、過去のBoC…","fields":{"slug":"/2021-06-24_beasts-of-chaos-memo/"},"frontmatter":{"date":"2021-06-24","title":"【AoS】ビースト・オブ・ケイオスに関する所感","description":"おもったことをとりあえず列挙","tags":["warhammer","aos","beasts-of-chaos"]}}}]}},"pageContext":{"slug":"beasts-of-chaos"}},
     "staticQueryHashes": ["2841359383","3257411868"]}
