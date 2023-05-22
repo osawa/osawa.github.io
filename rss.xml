@@ -1,4 +1,214 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[osawa no log]]></title><description><![CDATA[desc]]></description><link>https://osawa/github.io/blog</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 07 Oct 2022 12:05:19 GMT</lastBuildDate><item><title><![CDATA[【AoS】ナイトホーント新バトルトームにおける所感]]></title><description><![CDATA[2022年6月に国内発売されたナイトホーントのバトルトームにおける所感 前提 新バトルトームでのプレイ回数は3回（2000pt x 2、1000pt x 1） うち、サブファクションはエメラルドホスト2回、スカーレットドゥーム…]]></description><link>https://osawa/github.io/blog/2022-10-07_nighthaunt-impression/</link><guid isPermaLink="false">https://osawa/github.io/blog/2022-10-07_nighthaunt-impression/</guid><pubDate>Fri, 07 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;2022年6月に国内発売されたナイトホーントのバトルトームにおける所感&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[osawa no log]]></title><description><![CDATA[desc]]></description><link>https://osawa/github.io/blog</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 22 May 2023 07:25:05 GMT</lastBuildDate><item><title><![CDATA[格ゲーをはじめる：第2回「SFV基礎練習」]]></title><description><![CDATA[前回からの進捗まとめ 毎日とはいかないながら、たまに小一時間程度トレモで基礎練習を行っていた 基本コンボ（かんたんめなやつ）、対空（ついでに投げ抜け） ギルティギア・ストライヴ（以下GGST）のクロスプレイにかかるオープンβ…]]></description><link>https://osawa/github.io/blog/2022-10-21_start-fighting-games_2/</link><guid isPermaLink="false">https://osawa/github.io/blog/2022-10-21_start-fighting-games_2/</guid><pubDate>Fri, 21 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;前回からの進捗まとめ&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;毎日とはいかないながら、たまに小一時間程度トレモで基礎練習を行っていた&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基本コンボ（かんたんめなやつ）、対空（ついでに投げ抜け）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ギルティギア・ストライヴ（以下GGST）のクロスプレイにかかるオープンβテストが始まったので、ためしてみた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;基礎練習&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;使用キャラは例によってキャミィ&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;気晴らしにアーケードモード（CPU: Easy）にいったりもしたが、基本的にはひたすらトレモでケンを殴る&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;練習内容によっては逆にボコられる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;基本コンボを覚える&lt;/h3&gt;
+&lt;p&gt;いくらか調べたところ、以下のコンボがまず覚えるのに向いているとあった：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;5MP -&gt; 5MK -&gt; Lスパイラルアロー&lt;/li&gt;
+&lt;li&gt;前JLK -&gt; 2LP -&gt; 2LP -&gt; Lスパイラルアロー&lt;/li&gt;
+&lt;li&gt;2LP -&gt; 2LP -&gt; Lスパイラルアロー&lt;/li&gt;
+&lt;li&gt;2LK -&gt; 2LP -&gt; Lスパイラルアロー&lt;/li&gt;
+&lt;li&gt;5HP -&gt; Lスパイラルアロー&lt;/li&gt;
+&lt;li&gt;5MP -&gt; 5HP -&gt; Lスパイラルアロー&lt;/li&gt;
+&lt;li&gt;前JLK -&gt; 5MP -&gt; 5HP -&gt; Lスパイラルアロー&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;※ LMH: 小中大（弱中強）、P: パンチ、K: キック、J: ジャンプ、1-9: レバー方向&lt;/p&gt;
+&lt;p&gt;とにかくアローで締めろということはわかった（※画面端ならキャノンスパイクのほうがよいようだ）
+基本といっても種類が多く（上のほかにもまだまだあった）混乱したが、ひとまず以下のようにカテゴライズした：&lt;/p&gt;
+&lt;h4&gt;置きコンボ&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;5HP -&gt; Lスパイラルアロー&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;当てコンボ&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;5MP -&gt; 5MK -&gt; Lスパイラルアロー&lt;/li&gt;
+&lt;li&gt;5MP -&gt; 5HP -&gt; Lスパイラルアロー&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;崩しコンボ&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;2LP -&gt; 2LP -&gt; Lスパイラルアロー&lt;/li&gt;
+&lt;li&gt;2LK -&gt; 2LP -&gt; Lスパイラルアロー&lt;/li&gt;
+&lt;li&gt;前JLK -&gt; 2LP -&gt; 2LP -&gt; Lスパイラルアロー&lt;/li&gt;
+&lt;li&gt;前JLK -&gt; 5MP -&gt; 5HP -&gt; Lスパイラルアロー&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;なぜ分けたかといえば、一度にたくさんのことはできないので、それぞれの役割において一つずつ覚えようと思ったからである。
+そもそもこのカテゴライズがどうなんだというのもあるし、分類まちがってるよ、というのもあるかもしれないのだが、なにぶんまだそれを判定できないので暫定的にこんな感じにしておく。
+ともあれ上記をふまえ、一部のコンボが一部のコンボの発展型だったりするのも考慮して、以下の3コンボを覚えることにした：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;5MP -&gt; 5MK -&gt; Lスパイラルアロー&lt;/li&gt;
+&lt;li&gt;前JLK -&gt; 5MP -&gt; 5HP -&gt; Lスパイラルアロー&lt;/li&gt;
+&lt;li&gt;2LP -&gt; 2LP -&gt; Lスパイラルアロー&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;1は試した結果いちばんヒット確認がしやすく、おじさんの手指にも忙しくなくやさしい、という理由で選択。
+2は自分から攻めかける方法が全然わからないため、とりあえずめくりジャンプKからヒットしてれば最後まで出せるコンボとして選択。
+3は相手にボコされてるとき、最速暴れ（2LPは発生3f）から出せるコンボとして選択。
+置きコンボについては2の簡略版で5HPからやればよいため、2が安定すれば自然と出せるようになると判断した。&lt;/p&gt;
+&lt;h3&gt;対空&lt;/h3&gt;
+&lt;p&gt;「まずはすぐ出せる通常技で練習せよ」「無敵対空があるなら無敵対空を出せるようにせよ」両方の意見をみた。
+前者の意図としては「とっさのときにすぐ出せるものこそ手癖にすべきだ」ということのようだが、キャミィの通常技対空である4MPは真上に出るため、斜め前への対空が難しく、とっさに出せても命中させるのが困難なのではないかと思ったのと、せっかく無敵技のキャノンスパイクがあるんだから使ってあげたい、ということで後者を採用。
+無敵技で安定してきたあと通常技対空を会得するのはさほど難しくなかろう、という予想もあるが、はたしてどうだろうか……&lt;/p&gt;
+&lt;h2&gt;進捗および感想&lt;/h2&gt;
+&lt;p&gt;基本コンボについてはまず棒立ちのダミー相手に出せなきゃ話にならないので、ひたすら木偶のケンに対して練習した。
+2段目以降をガードする設定にしておけば、コンボがつながったときのみヒットするので成否の判定がしやすい。
+本当は初段からガードされたときにアローまで出さず途中で止める訓練も行う必要があるのだが（置きコンボのみ必要ない）、まずは考えないことにする。
+結果、1はだいぶ安定したのだが、2と3がなかなか安定しない。
+2はまず前JLKのタイミングがむずい。上で空振ったり着地しちゃったりする。当たったとしても高めだとそのあとの5MPがつながらない。
+そこの判定をしっかり見ようとすると5HP -&gt; アローが遅れてつながらなくなったりする。
+3は単純に目押しタイミングがシビアで、早すぎると2発目の2LPが出ない。
+また、同じタイミングでアローを入力すると出ないので、ﾊﾟﾝﾊﾟﾊﾟﾝくらいのタイミングで少し早めにアローを入れ込む必要がある。&lt;/p&gt;
+&lt;p&gt;基本コンボでこのつまづきよう、やはりセンスが……な……&lt;/p&gt;
+&lt;p&gt;対空については、よく訓練方法として紹介されている「ダミーに垂直ジャンプ -&gt; 前ジャンプ攻撃を記憶させておき、それを落とす」やつを試すも、これは早々に安定。
+「これからジャンプ攻撃しますよ〜」という予告垂直ジャンプがあるため、完全にスタンバイができてしまうためだ。
+少し気をよくしたが、でもこれ続けてても絶対実戦で出ないぞ……？ と思ったので、こちらが出るタイミングを予想できない形で飛ばせることにした。
+具体的には、以下の3つの行動をランダムで行わせる形とした：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;前JHK（垂直ジャンプはオミット）&lt;/li&gt;
+&lt;li&gt;前ステップ -&gt; 投げ&lt;/li&gt;
+&lt;li&gt;波動拳&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;これに対して、1なら対空、2なら投げ抜け、3ならガード（他にも対処方法はいろいろあるが、まずこれ）でリアクションする練習である。
+案の定これにした途端に対空はめっきり出なくなり、ポンポン投げられ、なんなら波動も食らいがちとなったため、トレーニングメニューの策定には満足しつつ、心はバッキリ折られてしまった。
+まずは各行動の前に1秒ほど静止時間を作るのがよいかもしれない……&lt;/p&gt;
+&lt;p&gt;また、この他にキャノンストライクの練習もしているのだが、これはとくに書くことがない。なかなか出ない。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;次回はタイミングよくクロスプレイオープンβテストを行っていた、ギルティギア・ストライヴを触ってみた話を書くゾイ&lt;/p&gt;</content:encoded></item><item><title><![CDATA[格ゲーをはじめる：第1回]]></title><description><![CDATA[おじさんからのスタートでも人並みにやれるのか、セルフドキュメンタリーの試み 前提 スト…]]></description><link>https://osawa/github.io/blog/2022-10-10_start-fighting-games/</link><guid isPermaLink="false">https://osawa/github.io/blog/2022-10-10_start-fighting-games/</guid><pubDate>Mon, 10 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;おじさんからのスタートでも人並みにやれるのか、セルフドキュメンタリーの試み&lt;/p&gt;
+&lt;h2&gt;前提&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;スト2世代（当時小学生）ながら不惑を迎える今年までほぼまったく格ゲーに触れていない&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;「ドラゴンボール超武闘伝」「三國無双（真じゃないやつ）」「ウルトラマン光の巨人伝説」は軽くやってた&lt;/li&gt;
+&lt;li&gt;ヴァンパイアハンターをゲーセンで触ったことはあるが、CPU相手にろくすっぽ勝てず秒でやめた&lt;/li&gt;
+&lt;li&gt;対人戦の経験はほぼ皆無といっていい（上記作品で数時間レバガチャ対戦したくらい）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;動機&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;デジタル／アナログ問わずほどほどのゲーマーである、という自負がありながら格ゲーできないマンであることに少々のコンプレックスがある&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;格ゲー観戦はそこそこ好きだが、プレイヤーでないために楽しみきれていない気がしている&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;リアル格闘技をみる感覚でいいのかもしれないが、それでいうとショーを兼ねたプロレス以外あまり好きでない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;格ゲーのみならずタイマンの対人戦が苦手だが、ウォーハンマーを契機に克服しよう（できるのでは）という気持ちになってきている&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ウォーハンマーはダイスゲー（≒運ゲー要素つよめ）だからできてるだけ、とも思ってるけど……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;各タイトルをもっと知りたいし、好きなキャラをしっかりしゃぶりたい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;はじめてみる（キャラクターを選ぶ）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;PS4フリープレイのときに落としておいたスト5をとりあえず触ってみる&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;キャラを選ぶにあたって、あえてどんどん前進して接近戦を挑むタイプを選ぶことにした&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;他のゲームから、本来の自分が中〜遠距離タイプというか、後衛寄りだったり、殴り合い以外のプレイスタイルを好みがちである自覚があった&lt;/li&gt;
+&lt;li&gt;ボードゲームにおいても直接的な殴り合い要素の強いゲームは苦手としている&lt;/li&gt;
+&lt;li&gt;これは殴られたときに沸騰しがちな自分のメンタリティに起因するものであり、それが格ゲーへの苦手意識の一因でもある&lt;/li&gt;
+&lt;li&gt;そこで、あえて自分のスタンスと反するキャラを選ぶことで殻を破ろうという狙いである&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;以上を踏まえつつ見た目の好みも加味して、自キャラ候補はキャミィ／バイソン／ミカあたりとした&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;飛び道具がなく、近距離で勝負していくタイプっぽいのを選出&lt;/li&gt;
+&lt;li&gt;だったが、手持ちのエディション（16キャラ使用可能）ではバイソンが使えなかった&lt;/li&gt;
+&lt;li&gt;また、最初から投げキャラを選ぶのは格ゲーをイチから学んでいくのにどうか、という思いでミカも除外&lt;/li&gt;
+&lt;li&gt;結果、とりあえずキャミィに決定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;操作がつらい → アケコン買うか？&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;いざ触ってみると、コンボに使用するボタンの一部がトリガー（R1, R2）にあるのがつらすぎることが判明&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;強P（R1）および強K（R2）がつらい&lt;/li&gt;
+&lt;li&gt;Vトリガー（強P＋強K）もつらい&lt;/li&gt;
+&lt;li&gt;Vシフト（中K＋強P）はもっとつらい&lt;/li&gt;
+&lt;li&gt;Vリバーサル（PPPあるいはKKK、L1およびL2にアサインされてる）はもっともっとつらい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;6ボタン式であるHORIのファイティングコマンダーOCTAを検討するも、大体品切れ中かプレミア価格（2022/10現在）&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;仕方ないからアケコン買おうと思うも、ちゃんとしてるやつは1万オーバーなので躊躇する&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;買ってすぐやらなくなったらひどい銭失いになってしまう……&lt;/li&gt;
+&lt;li&gt;あえてデカめの初期投資をすることによって、自分にプレッシャーをかけるという考え方もある……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;アケコン買った&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;やらない後悔よりやる後悔、ということで購入を決意&lt;/li&gt;
+&lt;li&gt;なるべく費用を抑えつつも一定の品質が保たれているものとして、Qanba DroneとMayflash F300 Eliteを候補とする&lt;/li&gt;
+&lt;li&gt;将来的にSwitchでも格ゲー（およびSTGなど）をやる可能性を考えて、対応機種の多いMayflashを選択&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;レバーのガイドを付属の八角ガイドに交換&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;正直未経験者なのでデフォルトの四角ガイドでよかろうとも思ったが、波動およびヨガコマンドが個人的に苦手っぽいので交換することにした&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;意外と昇竜は困らない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;交換したら波動とヨガは出やすくなったが、代わりに昇竜の安定性が多少おちた&lt;/li&gt;
+&lt;li&gt;しばらく触ってみて、昇竜に困りだしたら戻すかも&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;トレモで練習&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;「いきなり対人やるべからず」というストーム久保先生のお言葉に従い、まずはトレモで基本操作に慣れる&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;参考：&lt;a href=&quot;https://youtu.be/h3kv7CN5KR8&quot; target=&quot;_blank&quot;&gt;https://youtu.be/h3kv7CN5KR8&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;キャノンストライク（前方ジャンプ中に逆波動）以外はニュートラルからなら90%くらいの確率で出せることを確認&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ストライクは50%くらいしか出ない&lt;/li&gt;
+&lt;li&gt;そもそも前ジャンプ出そうとして垂直になることも……&lt;/li&gt;
+&lt;li&gt;低空ストライク（ジャンプ昇り中に出して相手の下半身に当てるテク）はほぼ出ない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;とりあえずここから何をしていくか&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;自分への課題設定として、以下を考えてみた：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基本コンボの習得：調べてみるとスパイラルアロー締めのコンボがいっぱいあるので、いくつか覚えて出せるようにする&lt;/li&gt;
+&lt;li&gt;対空の習得：ジャンプ攻撃をキャノンスパイク（昇竜）で落とせるようにする&lt;/li&gt;
+&lt;li&gt;防御の感覚をつかむ：ガードをする、投げ抜けをする、受け身を取る&lt;/li&gt;
+&lt;li&gt;立ち回りを覚える：置きだの差し返しだの起き攻めだの択だの、なんかいろいろある&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;おそらく立ち回りが格ゲーにおける文法だと思っていて、対戦にはこれが必要だが、まだそこに手を出す段階ではない気がする&lt;/li&gt;
+&lt;li&gt;まずレバガチャからの脱却＝自分が意図した行動を取れる、というところを目標とすべき&lt;/li&gt;
+&lt;li&gt;また「いったん殴られはじめて無限にボコられて負ける→むかつく」という数少ない記憶に基づき、最低限の防御を覚えたい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;次回は（あれば）まず初手として何をしたか、その進捗はどうか、みたいなことを書く予定&lt;/p&gt;</content:encoded></item><item><title><![CDATA[【AoS】ナイトホーント新バトルトームにおける所感]]></title><description><![CDATA[2022年6月に国内発売されたナイトホーントのバトルトームにおける所感 前提 新バトルトームでのプレイ回数は3回（2000pt x 2、1000pt x 1） うち、サブファクションはエメラルドホスト2回、スカーレットドゥーム…]]></description><link>https://osawa/github.io/blog/2022-10-07_nighthaunt-impression/</link><guid isPermaLink="false">https://osawa/github.io/blog/2022-10-07_nighthaunt-impression/</guid><pubDate>Fri, 07 Oct 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;2022年6月に国内発売されたナイトホーントのバトルトームにおける所感&lt;/p&gt;
 &lt;h2&gt;前提&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;新バトルトームでのプレイ回数は3回（2000pt x 2、1000pt x 1）&lt;/li&gt;
@@ -475,7 +685,8 @@ A：各陣営にはピッチバトル・プロフィール表が用意されて�
 &lt;!--
 &gt; アーミーが属する陣営を1つ選択しなければならない。自軍内のすべてのユニットは単一の陣営に属していなければならない。
 &gt; 自軍を選択する際に使用できるルールを記載している出版物のリストについては、46ページを参照。
---&gt;</content:encoded></item><item><title><![CDATA[【AoS】経済的にストキャスを組みたいのでコスパ表を作った]]></title><description><![CDATA[2021.09.18現在 お金がないしメインアーミーではないが、スタートセットでそれなりの量を保持しているのでアーミー組んでしまいたい 経済的に組むにはポイントに比してお安いユニットを揃えればいいのだ、ということでコスパ表を作ってみる コスパ表 ヒーロー Unit Cost…]]></description><link>https://osawa/github.io/blog/2021-09-18_aos-economical-building-stormcasts/</link><guid isPermaLink="false">https://osawa/github.io/blog/2021-09-18_aos-economical-building-stormcasts/</guid><pubDate>Sat, 18 Sep 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;2021.09.18現在&lt;/p&gt;
+--&gt;</content:encoded></item><item><title><![CDATA[(Outdated) 【AoS】経済的にストキャスを組みたいのでコスパ表を作った]]></title><description><![CDATA[※こちらは古い情報のため、参照データとして適切なものではありません 2021.09.1…]]></description><link>https://osawa/github.io/blog/2021-09-18_aos-economical-building-stormcasts/</link><guid isPermaLink="false">https://osawa/github.io/blog/2021-09-18_aos-economical-building-stormcasts/</guid><pubDate>Sat, 18 Sep 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span style=&quot;color:red;font-weight:bold;&quot;&gt;※こちらは古い情報のため、参照データとして適切なものではありません&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;2021.09.18現在&lt;/p&gt;
 &lt;p&gt;お金がないしメインアーミーではないが、スタートセットでそれなりの量を保持しているのでアーミー組んでしまいたい&lt;/p&gt;
 &lt;p&gt;経済的に組むにはポイントに比してお安いユニットを揃えればいいのだ、ということでコスパ表を作ってみる&lt;/p&gt;
 &lt;h2&gt;コスパ表&lt;/h2&gt;

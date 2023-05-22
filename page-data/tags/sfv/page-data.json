@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tag-page-js",
+    "path": "/tags/sfv/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"osawa no log","description":"desc"}},"allMarkdownRemark":{"edges":[{"node":{"excerpt":"前回からの進捗まとめ 毎日とはいかないながら、たまに小一時間程度トレモで基礎練習を行っていた 基本コンボ（かんたんめなやつ）、対空（ついでに投げ抜け） ギルティギア・ストライヴ（以下GGST）のクロスプレイにかかるオープンβ…","fields":{"slug":"/2022-10-21_start-fighting-games_2/"},"frontmatter":{"date":"2022-10-21","title":"格ゲーをはじめる：第2回「SFV基礎練習」","description":"対人の恐怖に負けながら地道に練習","tags":["fighting-games","sfv"]}}},{"node":{"excerpt":"おじさんからのスタートでも人並みにやれるのか、セルフドキュメンタリーの試み 前提 スト…","fields":{"slug":"/2022-10-10_start-fighting-games/"},"frontmatter":{"date":"2022-10-10","title":"格ゲーをはじめる：第1回","description":"おじさんからのスタートでも人並みにやれるのか、セルフドキュメンタリーの試み","tags":["fighting-games","sfv"]}}}]}},"pageContext":{"slug":"sfv"}},
+    "staticQueryHashes": ["2841359383","3257411868"]}
