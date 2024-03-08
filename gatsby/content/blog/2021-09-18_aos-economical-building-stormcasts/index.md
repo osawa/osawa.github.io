@@ -1,9 +1,11 @@
 ---
-title: 【AoS】経済的にストキャスを組みたいのでコスパ表を作った
+title: (Outdated) 【AoS】経済的にストキャスを組みたいのでコスパ表を作った
 date: "2021-09-18"
 tags: ['warhammer', 'aos', '3rd-edition', 'stormcast-eternals']
 description: お金がないしメインアーミーではないが、スタートセットでそれなりの量を保持しているのでアーミー組んでしまいたい
 ---
+
+<span style="color:red;font-weight:bold;">※こちらは古い情報のため、参照データとして適切なものではありません</span>
 
 2021.09.18現在
 

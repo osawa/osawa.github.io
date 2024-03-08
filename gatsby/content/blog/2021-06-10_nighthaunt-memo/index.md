@@ -1,10 +1,12 @@
 ---
-title: 【AoS】ナイトホーントに関するメモ
+title: (Outdated) 【AoS】ナイトホーントに関するメモ
 date: "2021-06-10"
 description: 2021-07-24更新、3版対応
 tags: ['warhammer', 'aos', 'nighthaunt', 'memo']
 modified_at: 2021-07-24
 ---
+
+<span style="color:red;font-weight:bold;">※こちらは古い情報のため、参照データとして適切なものではありません</span>
 
 ## 傷あたりのコスト
 

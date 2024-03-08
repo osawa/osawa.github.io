@@ -1,9 +1,12 @@
 ---
-title: 【AoS】ピッチバトル・プロフィール2021記載のポイント正誤表（英日比較）
+title: (Outdated) 【AoS】ピッチバトル・プロフィール2021記載のポイント正誤表（英日比較）
 date: "2021-07-05"
 tags: ['warhammer', 'aos', '3rd-edition']
 description: なぜか120ptを140ptにしがち
 ---
+
+<span style="color:red;font-weight:bold;">※こちらは古い情報のため、参照データとして適切なものではありません</span>
+
 
 なぜか120ptを140ptにしがち
 

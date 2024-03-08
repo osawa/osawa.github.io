@@ -1,12 +1,12 @@
 ---
-title: 【AoS】ソウルブライト・グレイヴロードに関するメモ
+title: (Outdated) 【AoS】ソウルブライト・グレイヴロードに関するメモ
 date: "2021-06-07"
 description: おもったことをとりあえず列挙
 tags: ['warhammer', 'aos', 'soulblight-gravelords']
 modified_at: 2021-10-08
 ---
 
-そろそろトピックごとに記事わけるべきか
+<span style="color:red;font-weight:bold;">※こちらは古い情報のため、参照データとして適切なものではありません</span>
 
 ## ユニット
 ### デッドウォーカー・ゾンビ / Deadwalker Zombies
