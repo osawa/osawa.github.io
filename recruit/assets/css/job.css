@@ -1,0 +1,507 @@
+.key-visual.job {
+  display: flex;
+  align-items: center;
+  padding-top: 54px;
+  background: transparent;
+  height: 620px;
+}
+.key-visual.job h1 {
+  opacity: 0;
+  z-index: 10;
+  width: 100%;
+  margin: 0 auto;
+  color: #0041c0;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.6666666667em;
+  letter-spacing: 0.05em;
+  transition: all 1s;
+  transition-delay: 0.2s;
+  padding-top: 178px;
+  max-width: 980px;
+}
+.key-visual.job h1.loaded {
+  opacity: 1;
+  background: url("../img/job/text-job-category.svg") no-repeat left top;
+}
+
+.job-copy {
+  z-index: 100;
+  margin: 0 -0.2em;
+  color: #0041c0;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.job-copy span.wh {
+  display: inline-block;
+  opacity: 0;
+  left: 50px;
+  padding: 0 0.2em;
+  background-color: #fff;
+  line-height: 1.2em;
+  transition: all 0.6s;
+}
+.job-copy span.wh:first-of-type {
+  transition-delay: 0.2s;
+}
+.job-copy span.wh:nth-of-type(2) {
+  transition-delay: 0.4s;
+}
+.job-copy.loaded span.wh {
+  opacity: 1;
+  left: 0;
+}
+.job-copy--kv {
+  font-size: 4.5rem;
+}
+.job-copy--kv span.wh:nth-of-type(2) {
+  margin-left: 2.75em;
+}
+.job-copy-- {
+  font-size: 4.5rem;
+}
+.job-copy-- span.wh:nth-of-type(2) {
+  margin-left: 2.75em;
+}
+
+.copy-section {
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.solution-section {
+  margin: 70px auto 300px;
+  max-width: 1120px;
+}
+.solution-section p {
+  margin-top: 80px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.1875em;
+  letter-spacing: 0.07em;
+  color: #0041c0;
+  text-align: center;
+}
+
+.job-category-section {
+  padding-bottom: 300px;
+}
+.job-category-section__title {
+  display: flex;
+  margin: 0 auto;
+  width: 880px;
+}
+.job-category-section__title--right {
+  justify-content: flex-end;
+}
+.job-category-section__header {
+  position: relative;
+  margin-top: 40px;
+}
+.job-category-section__header img {
+  width: 100%;
+}
+.job-category-section__badge {
+  position: absolute;
+  top: -50px;
+}
+.job-category-section__badge--left {
+  left: 80px;
+}
+.job-category-section__badge--right {
+  right: 80px;
+}
+.job-category-section__main {
+  margin: -100px auto 0;
+  width: 960px;
+}
+.job-category-section__main p {
+  margin-top: 40px;
+  font-size: 1.6rem;
+  line-height: 2.1875;
+  letter-spacing: 0.05em;
+}
+.job-category-section__main--sales p, .job-category-section__main--staff p {
+  max-width: 720px;
+}
+.job-category-section__main--plan, .job-category-section__main--service {
+  padding-left: 240px;
+}
+.job-category-section__columns {
+  display: flex;
+  gap: 80px;
+  margin-top: 35px;
+  font-size: 1.6rem;
+  line-height: 2.1875;
+  letter-spacing: 0.05em;
+}
+.job-category-section__columns > * {
+  width: calc(50% - 40px);
+}
+.job-category-section__columns dt {
+  font-weight: 700;
+}
+.job-category-section__suitability {
+  position: relative;
+  margin: 50px auto 0;
+  padding-top: 140px;
+  max-width: 1120px;
+}
+.job-category-title {
+  position: relative;
+  padding-top: 35px;
+  opacity: 0;
+  transition: all 0.6s;
+  line-height: 1;
+}
+.job-category-title--sales {
+  background: url("../img/job/text-sales.svg") no-repeat left top;
+  min-width: 221px;
+}
+.job-category-title--sales h2 {
+  margin-left: 0.9em;
+}
+.job-category-title--plan {
+  background: url("../img/job/text-plan.svg") no-repeat right 35px top 0;
+  min-width: 211px;
+  text-align: right;
+}
+.job-category-title--engineer {
+  background: url("../img/job/text-engineer.svg") no-repeat left top;
+  min-width: 353px;
+}
+.job-category-title--engineer h2 {
+  margin-left: 0.9em;
+}
+.job-category-title--service {
+  background: url("../img/job/text-service.svg") no-repeat right top;
+  min-width: 297px;
+}
+.job-category-title--service h2 {
+  margin-right: 0.9em;
+}
+.job-category-title--staff {
+  background: url("../img/job/text-staff.svg") no-repeat left top;
+  min-width: 218px;
+}
+.job-category-title--staff h2 {
+  margin-left: 0.9em;
+}
+.job-category-title.loaded {
+  opacity: 1;
+}
+.job-category-title:nth-of-type(odd) {
+  left: 50px;
+}
+.job-category-title:nth-of-type(odd).loaded {
+  left: 0;
+}
+.job-category-title:nth-of-type(even) {
+  right: 50px;
+}
+.job-category-title:nth-of-type(even).loaded {
+  right: 0;
+}
+.job-category-title h2 {
+  position: relative;
+  bottom: -50px;
+  transition: all 0.6s;
+  transition-delay: 0.2s;
+  opacity: 0;
+  font-weight: 700;
+  font-size: 4.5rem;
+  color: #0041c0;
+  letter-spacing: 0.1em;
+}
+.job-category-title h2.loaded {
+  opacity: 1;
+  bottom: 0;
+}
+.job-category-title h2 small {
+  position: relative;
+  top: -10px;
+  font-size: 2rem;
+  letter-spacing: 0.15em;
+}
+
+.job-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 10px;
+  border-radius: 100%;
+  background-image: linear-gradient(to right bottom, #3983e2 15%, #1840b9 85%);
+  width: 150px;
+  height: 150px;
+  color: white;
+}
+.job-badge__number {
+  position: relative;
+  width: 51px;
+  height: 59px;
+  line-height: 1;
+}
+.job-badge__number::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(40deg);
+  height: 82px;
+  border-left: 1px solid white;
+}
+.job-badge__number b {
+  position: relative;
+  top: -5px;
+  left: -5px;
+  font-weight: normal;
+  font-size: 3.5rem;
+}
+.job-badge__number small {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 2rem;
+}
+.job-badge__slash {
+  display: none;
+}
+.job-badge__label {
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+}
+
+.job-suitability {
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  background: rgba(0, 65, 192, 0.1);
+}
+.job-suitability__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.3333333333%;
+  height: 160px;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #0041c0;
+  line-height: 1.68;
+  text-align: center;
+}
+.job-suitability__item::after {
+  content: "";
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  height: 160px;
+  border-right: 1px solid #0041c0;
+}
+.job-suitability__item:last-of-type::after {
+  content: none;
+}
+.job-suitability__item img {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.job-suitability__item div {
+  width: 100%;
+}
+
+.job-suitability-balloon {
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  padding: 20px 30px;
+  border-radius: 9999px;
+  background: #00aaff;
+  font-size: 2rem;
+  color: white;
+  letter-spacing: 0.05em;
+}
+.job-suitability-balloon::after {
+  content: "";
+  position: absolute;
+  bottom: -23px;
+  border-top: 28px solid #00aaff;
+}
+.job-suitability-balloon--left {
+  left: 140px;
+}
+.job-suitability-balloon--left::after {
+  right: 78px;
+  border-left: 19px solid transparent;
+}
+.job-suitability-balloon--right {
+  right: 140px;
+}
+.job-suitability-balloon--right::after {
+  left: 78px;
+  border-right: 19px solid transparent;
+}
+
+.job-persons-balloon {
+  margin: 120px auto 30px;
+  padding-bottom: 50px;
+  background: url("../img/job/balloon.svg") no-repeat left bottom;
+  background-size: 100% auto;
+  width: 318px;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  color: #0041c0;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.job-persons .splide {
+  visibility: initial;
+}
+.job-persons .splide__track {
+  overflow: initial;
+}
+.job-persons ul.nav li.is-active > a picture.thumb.hover,
+.job-persons ul.nav li.is-active > a > div.thumb > p.copy,
+.job-persons ul.nav li.is-active > a > div.thumb > p.title,
+.job-persons ul.nav li.is-active > a > p.read-more, .job-persons ul.nav li:hover > a picture.thumb.hover,
+.job-persons ul.nav li:hover > a > div.thumb > p.copy,
+.job-persons ul.nav li:hover > a > div.thumb > p.title,
+.job-persons ul.nav li:hover > a > p.read-more {
+  opacity: 1;
+}
+.job-persons h2.loaded {
+  opacity: 1;
+}
+.job-persons ul.nav {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 680px;
+  -moz-column-gap: 25px;
+  column-gap: 25px;
+}
+.job-persons ul.nav li {
+  width: 250px;
+  transition: all 0.3s;
+}
+.job-persons ul.nav li:first-child {
+  z-index: 4;
+}
+.job-persons ul.nav li:nth-child(2) {
+  z-index: 3;
+}
+.job-persons ul.nav li:nth-child(3) {
+  z-index: 2;
+}
+.job-persons ul.nav li:last-child {
+  z-index: 1;
+}
+.job-persons ul.nav li > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+.job-persons ul.nav li > a picture.thumb {
+  transform-origin: 50% bottom;
+  width: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+.job-persons ul.nav li > a picture.thumb.hover {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 50% bottom;
+  border-radius: 8px;
+}
+.job-persons ul.nav li > a > div.thumb p.title {
+  opacity: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: all 0.3s;
+  writing-mode: vertical-rl;
+}
+.job-persons ul.nav li > a > div.thumb p.copy {
+  opacity: 0;
+  position: absolute;
+  bottom: 50px;
+  left: 65px;
+  color: #0041c0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.4em;
+  letter-spacing: 0.1em;
+  text-align: left;
+  white-space: nowrap;
+  transition: all 0.3s;
+}
+.job-persons ul.nav li > a > div.thumb p.copy span.wh {
+  display: inline-block;
+  opacity: 0;
+  left: 10px;
+  background-color: #fff;
+  line-height: 1.2em;
+  transition: all 0.3s;
+}
+.job-persons ul.nav li > a > p.num {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1em;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+.job-persons ul.nav li > a > p.detail {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2em;
+  letter-spacing: 0.05em;
+}
+.job-persons ul.nav li > a > p.read-more {
+  opacity: 0;
+  position: absolute;
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s;
+}
+.job-persons ul.nav li.is-active, .job-persons ul.nav li.is-active > a picture.thumb, .job-persons ul.nav li:hover, .job-persons ul.nav li:hover > a picture.thumb {
+  width: 300px;
+}
+.job-persons ul.nav li.is-active a > div.thumb > p.copy span.wh, .job-persons ul.nav li:hover a > div.thumb > p.copy span.wh {
+  opacity: 1;
+  left: 0;
+}
+.job-persons ul.nav li.is-active a > div.thumb > p.copy span.wh:first-of-type, .job-persons ul.nav li:hover a > div.thumb > p.copy span.wh:first-of-type {
+  transition-delay: 0.2s;
+}
+.job-persons ul.nav li.is-active a > div.thumb > p.copy span.wh:nth-of-type(2), .job-persons ul.nav li:hover a > div.thumb > p.copy span.wh:nth-of-type(2) {
+  transition-delay: 0.4s;
+}
+.job-persons ul.nav li.is-active a > div.thumb > p.copy span.wh:nth-of-type(3), .job-persons ul.nav li:hover a > div.thumb > p.copy span.wh:nth-of-type(3) {
+  transition-delay: 0.6s;
+}
+.job-persons ul.nav li.is-active a > div.thumb > p.copy span.wh:nth-of-type(4), .job-persons ul.nav li:hover a > div.thumb > p.copy span.wh:nth-of-type(4) {
+  transition-delay: 0.8s;
+}
